@@ -1,0 +1,62 @@
+.page-footer {
+  border-top: 1px solid @rooms-bdr;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: @screen-m) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l ();
+    }
+  }
+
+  &__contact-text {
+    display: none;
+    text-decoration: none;
+    @media (min-width: @screen-m) {
+      display: inline-block;
+      max-width: 156px;
+      font-style: normal;
+      font-size: 14px;
+      text-align: left;
+      line-height: 18px;
+    }
+  }
+
+  &__contact-wrap {
+    display: none;
+    @media (min-width: @screen-m) {
+      display: inline-block;
+      max-width: 134px;
+      margin-right: 20px;
+
+    }
+  }
+
+  &__logo-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+footer .main-logo {
+  flex-basis: 100%;
+  padding-bottom: 5px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

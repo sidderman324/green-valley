@@ -1,0 +1,52 @@
+.placement-card:first-of-type {
+  margin-bottom: 50px;
+  @media (min-width: @screen-m) {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: @screen-l) {
+  .placement-card--bdr-gray:nth-child(3) {
+    display: none;
+  }
+}
+
+.placement-card {
+  background-color: #fff;
+  text-decoration: none;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  flex-basis: 46%;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media (min-width: @screen-l) {
+    flex-basis: 31%;
+  }
+
+  &--bdr-gray {
+    border: 1px solid @room-card-bdr;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 31px;
+    height: 200px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__subtitle {
+    font-family: @pt-serif;
+    font-size: 26px;
+    color: @text-color;
+    text-align: center;
+    line-height: 19px;
+    text-decoration: none;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+.reach-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  @media (min-width: @screen-l) {
+    padding-bottom: 65px;
+  }
+
+  &__title {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+  }
+
+  &__map {
+    width: 100%;
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l();
+    }
+  }
+
+  &__transport-type {
+    padding: 0 40px;
+    margin-top: 30px;
+
+    @media (min-width: @screen-l) {
+      display: flex;
+      flex-direction: row;
+      // align-items: flex-start;
+      // justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding-top: 88px;
+}
+
+h1,h2,h3,h4,p,blockquote {
+  margin: 0;
+}
+
+.main-title {
+  font-family: @title-font;
+  font-size: 26px;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  font-weight: normal;
+
+  &--white {
+    color: #fff;
+  }
+
+  &--maxi {
+    font-size: 30px;
+
+    @media (min-width: @screen-m) {
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &--white {
+    color: #fff;
+  }
+}
+
+.main-subtitle {
+  font-family: @title-font;
+  color: #1c1c1c;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: normal;
+}

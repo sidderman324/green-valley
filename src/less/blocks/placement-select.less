@@ -1,0 +1,35 @@
+.placement-select {
+  background-color: @green-bgr;
+  padding-top: 45px;
+  padding-bottom: 50px;
+
+  &--bg-gray {
+    background-color: #f6f6f6;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+
+    h2 {
+      margin-bottom: 35px;
+      flex-basis: 100%;
+    }
+
+    @media (min-width: @screen-m) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l ();
+    }
+  }
+}

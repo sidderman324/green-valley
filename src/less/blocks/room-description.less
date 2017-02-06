@@ -1,0 +1,58 @@
+.room-description {
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  &__inner {
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l ();
+    }
+  }
+
+  &__price {
+    margin-bottom: 25px;
+  }
+
+  &__gallery {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+
+    @media (min-width: @screen-m) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 120px;
+    }
+
+    &-item {
+      text-align: left;
+      list-style-type: none;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 15px;
+  }
+}

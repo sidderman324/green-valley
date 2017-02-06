@@ -1,0 +1,58 @@
+.main-nav {
+  text-align: center;
+  display: none;
+
+  &--visible {
+    display: inline-block;  
+  }
+
+  @media (max-width: @screen-l) {
+    width: 100%;
+  }
+
+  @media (min-width: @screen-l) {
+    display: inline-block;
+    padding-bottom: 17px;
+    padding-right: 9%;
+  }
+
+  &__list {
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @screen-l) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: block;
+    list-style-type: none;
+    border-top: 1px solid @rooms-bdr;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    @media (min-width: @screen-l) {
+      border: 0;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    display: block;
+    font-size: 14px;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: @main-text-font;
+    color: @text-color;
+    @media (min-width: @screen-l) {
+      display: inline-block;
+      padding: 7px;
+    }
+  }
+}

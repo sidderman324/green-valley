@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Бронирование номера</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+      <div class="page-header__inner">
+
+          <a class="main-logo main-logo__header">
+            <img src="img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <a class="toggler-nav" id="toggler"><span></span></a>
+
+          <div class="main-nav" id="nav">
+              <nav class="main-nav__nav">
+                  <ul class="main-nav__list">
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./rooms-list.html">Номера</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Коттедж</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Ресторан</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Отдых</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Контакты</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+
+          <div class="main-contacts">
+            <div class="main-contacts__wrapper">
+              <a href="tel:+78127775588" class="main-contacts__phone">+7 812 777-55-88</a>
+              <address class="main-contacts__address main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+            </div>
+              <a href="#booking-form" id="booking-form" class="main-contacts__btn btn btn--bg-orange btn--icon-calendar">Забронировать</a>
+          </div>
+
+      </div>
+  </header>
+
+  
+    <h1 class="main-title  main-title--maxi">Бронирование</h1>
+    <p class="main-text  main-text--orange">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78127775588">+7 812 777-55-88</a></p>
+
+
+    <form action="" class="booking-form">
+
+        <!-- Шаг 1 выбор даты -->
+
+        <div class="booking-form__period-select">
+            <p class="step-number">Шаг 1</p>
+            <h2 class="main-title main-title--mini">Дата отдыха</h2>
+            <div class="rest-period">
+                <div class="rest-period__form">
+                  <p class="main-text main-text--mini">Дата въезда:</p>
+                    <input type="number" maxlength="2" class="rest-period__rest" placeholder="ДД">
+                    <input type="number" maxlength="2" class="rest-period__rest" placeholder="ММ">
+                    <input type="number" maxlength="4" class="rest-period__rest" placeholder="ГГГГ">
+                </div>
+                <div class="rest-period__form">
+                  <p class="main-text main-text--mini">Дата выезда:</p>
+                    <input type="number" maxlength="2" class="rest-period__rest" placeholder="ДД">
+                    <input type="number" maxlength="2" class="rest-period__rest" placeholder="ММ">
+                    <input type="number" maxlength="4" class="rest-period__rest" placeholder="ГГГГ">
+                </div>
+            </div>
+        </div>
+
+        <!-- Шаг 2 выбор места  -->
+
+        <div class="booking-form__placement-type">
+            <p class="step-number">Шаг 2</p>
+            <h2 class="main-title main-title--mini">Место проживания</h2>
+            <div class="placement-type">
+
+                <input type="radio" name="placement-hotel" id="hotel" class="placement-type__item">
+                <label for="placement-hotel">Отель</label>
+
+                <input type="radio" name="placement-cottage" id="cottage" class="placement-type__item">
+                <label for="placement-cottage">Коттедж</label>
+
+            </div>
+        </div>
+
+        <!-- Шаг 3 выбор типа коттеджа  -->
+
+        <div class="booking-form__cottage-type">
+            <p class="step-number">Шаг 3</p>
+            <h2 class="main-title main-title--mini">Тип коттеджа</h2>
+            <div class="cottage-type">
+
+              <div class="type-tabs">
+                <div data-number="1" class="type-tabs__item">
+                  <label for="flagship">
+                    <span class="form-text form-text--active  form-text--upper">Флагман</span>
+                  </label>
+                  <input type="radio" name="cottage-type">
+                </div>
+
+                <div data-number="2" class="type-tabs__item">
+                  <label for="laky">
+                    <span class="form-text  form-text--upper">Озерный</span>
+                  </label>
+                  <input type="radio" name="cottage-type">
+                </div>
+
+                <div data-number="3" class="type-tabs__item">
+                  <label for="port">
+                    <span class="form-text  form-text--upper">Портовый</span>
+                  </label>
+                  <input type="radio" name="cottage-type">
+                </div>
+                <div data-number="4" class="type-tabs__item">
+                  <label for="alder">
+                    <span class="form-text  form-text--upper">Ольховка</span>
+                  </label>
+                  <input type="radio" name="cottage-type">
+                </div>
+
+              </div>
+
+              <div class="cottage-advantages">
+
+                <div data-number="1" class="cottage-advantages__item">
+                    <ul class="cottage-advantages__list">
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 100 м2</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">3 комнаты</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">5 спальных мест</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Раздельный санузел</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                    </ul>
+                </div>
+
+                <div data-number="2" class="cottage-advantages__item">
+                    <ul class="cottage-advantages__list">
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                    </ul>
+                </div>
+
+                <div data-number="3" class="cottage-advantages__item">
+                    <ul class="cottage-advantages__list">
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                    </ul>
+                </div>
+
+                <div data-number="4" class="cottage-advantages__item">
+                    <ul class="cottage-advantages__list">
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
+                        <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                    </ul>
+                </div>
+
+              </div>
+          </div>
+        </div>
+
+        <!-- Шаг 4 Персональная информация -->
+
+        <div class="booking-form__personal-info">
+            <p class="step-number">Шаг 4</p>
+            <h2 class="main-title main-title--mini">Персональная информация</h2>
+            <div class="personal-info">
+                <input type="text" name="first-name" id="first-name" class="personal-info-item" placeholder="ИМЯ">
+                <input type="text" name="surname" id="surname" class="personal-info-item" placeholder="ФАМИЛИЯ">
+                <input type="text" name="phone" id="phone" class="personal-info-item" placeholder="НОМЕР ТЕЛЕФОНА">
+                <input type="text" name="e-mail" id="e-mail" class="personal-info-item" placeholder="E-MAIL">
+            </div>
+            <p class="form-text form-text--gray">Мы свяжемся с Вами в случае необходимости</p>
+            <p class="form-text form-text--gray">На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+        </div>
+
+        <!-- Шаг 5 выбор способа оплаты -->
+
+        <div class="booking-form__payment">
+            <p class="step-number">Шаг 5</p>
+            <h2 class="main-title main-title--mini">Способ оплаты</h2>
+
+            <div action="" class="total-price">
+                <p class="form-text form-text--gray form-text--upper">К оплате</p>
+                <p class="form-text form-text--gray">Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
+            </div>
+
+            <div class="payment-type-switcher">
+              <label for="on-arrival">
+                <input type="radio" id="on-arrival" name="payment-type" class="price-type-switcher__on-arrival">
+                <p class="form-text form-text--gray form-text--upper">По приезду</p>
+                <p class="form-text form-text--gray">Вы можете произвести оплату по факту заселения.</p>
+              </label>
+
+                <div class="payment-type-switcher__bank-card">
+                    <p class="form-text form-text--gray form-text--upper">Сейчас</p>
+                    <p class="form-text form-text--gray">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+                    <label class="form-text form-text--gray form-text--upper" for="card-number">Номер карты</label>
+                    <input type="number" placeholder="0000 0000 0000 0000" class="card-info-input" id="card-number">
+                    <label class="form-text form-text--gray form-text--upper" for="card-owner-name">Фамилия владельца карты</label>
+                    <input type="text" placeholder="sergey sidorov" class="card-info-input" id="card-owner-name">
+                    <label class="form-text form-text--gray form-text--upper" for="card-CVV">Код CVV</label>
+                    <input type="number" placeholder="123" class="card-info-input" id="card-CVV">
+                    <label class="form-text form-text--gray form-text--upper" for="card-valid-period">Действует до</label>
+                    <input type="number" placeholder="02/16" class="card-info-input" id="card-valid-period">
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="забронировать" class="btn btn--blue">
+
+    </form>
+
+
+    <!-- Footer -->
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <address class="page-footer__contact-text main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+
+        <div class="page-footer__logo-wrap">
+
+            <a class="main-logo">
+              <img src="./img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+            </a>
+
+            <div class="social">
+              <a href="#" class="link-social link-social--vk-green"></a>
+              <a href="#" class="link-social link-social--insta-green"></a>
+              <a href="#" class="link-social link-social--fb-green"></a>
+            </div>
+
+        </div>
+
+        <div class="page-footer__contact-wrap">
+
+            <a href="tel:+78120000000" class="page-footer__contact-text main-text main-text--address">+78120000000</a>
+            <a href="mailto:info@greenvalue.ru" class="page-footer__contact-text main-text main-text--address">info@greenvalue.ru</a>
+
+        </div>
+
+      </div>
+    </footer>
+  </body>
+
+  </html>
