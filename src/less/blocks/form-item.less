@@ -1,0 +1,19 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/form-item.less';
+
+.form-item {
+    box-sizing: border-box;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+      box-sizing: border-box;
+      padding: 0 20px;
+    }
+
+    &--bg-gray {
+      background-color: @form-bgr;
+    }
+}

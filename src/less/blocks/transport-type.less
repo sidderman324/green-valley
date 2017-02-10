@@ -13,11 +13,7 @@
     &--bus:before {
       content: '';
       display: block;
-      width: 50px;
-      height: 27px;
-      background-image: url(../../img/spritesheet.png);
-      background-position: -5px -5px;
-      background-repeat: no-repeat;
+      .sprite(@bus);
       margin: 10px auto;
       border-bottom: 2px solid ;
     }
@@ -25,11 +21,7 @@
     &--train:before {
       content: '';
       display: block;
-      width: 58px;
-      height: 24px;
-      background-image: url(../../img/spritesheet.png);
-      background-position: -5px -129px;
-      background-repeat: no-repeat;
+      .sprite(@train);
       margin: 10px auto;
       border-bottom: 2px solid ;
     }

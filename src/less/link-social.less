@@ -1,6 +1,6 @@
 .link-social {
   display: inline-block;
-  background: url(../img/spritesheet.png);
+  // background: url(../img/spritesheet.png);
 
   &--vk {
     width: 22px;
@@ -13,19 +13,14 @@
     background-position: -5px -42px;
   }
   &--fb-green {
-    width: 22px;
-    height: 20px;
-    background-position: -5px -69px;
+    .sprite(@fb-green);
   }
   &--insta-green {
-    width: 28px;
-    height: 20px;
-    background-position: -6px -99px;
+    .sprite(@insta-green);
+    padding-right: 4px;
   }
   &--vk-green {
-    width: 27px;
-    height: 20px;
-    background-position: -6px -188px;
+    .sprite(@vk-green);
   }
 
 

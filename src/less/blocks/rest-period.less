@@ -1,0 +1,29 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/rest-period.less';
+
+
+.rest-period {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-top: 30px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+
+  &__input {
+    .bordered ();
+    width: 55px;
+    height: 55px;
+    flex-basis: 33%;
+    text-align: center;
+
+    &:last-of-type {
+      width: 70px;
+    }
+  }
+}

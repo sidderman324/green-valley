@@ -10,18 +10,43 @@
     justify-content: center;
     align-items: center;
 
+    h1 {
+      flex-basis: 100%;
+    }
+
     @media (min-width: @screen-l) {
       .inner-screen-l ();
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
   &__price {
     margin-bottom: 25px;
+    margin-top: 5px;
+    flex-basis: 100%;
   }
 
   &__gallery {
     margin-left: -20px;
     margin-right: -20px;
+    @media (min-width: @screen-l) {
+      flex-basis: 50%;
+      width: 580px;
+      height: 400px;
+      // align-self: flex-end;
+      order: 3;
+    }
+  }
+
+  &__info-block {
+
+    @media (min-width: @screen-l) {
+      flex-basis: 50%;
+      align-self: flex-start;
+      order: 2;
+    }
   }
 
   &__title {
@@ -53,6 +78,7 @@
   }
 
   &__btn {
+    margin: 0 auto;
     margin-bottom: 15px;
   }
 }

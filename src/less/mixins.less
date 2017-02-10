@@ -4,3 +4,14 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.bordered () {
+  box-sizing: border-box;
+  border-top: 0.5px solid #ebebeb;
+  border-left: 0.5px solid #ebebeb;
+  border-bottom: 0.5px solid #ebebeb;
+  border-right: 0;
+  &:last-of-type {
+    border: 0.5px solid #ebebeb;
+  }
+}

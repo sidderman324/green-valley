@@ -1,0 +1,25 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/placement-type.less';
+
+
+.placement-type {
+  .bordered ();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  padding: 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+  }
+
+  &__label {
+    box-sizing: border-box;
+  }
+
+  &__input {
+    display: none;
+  }
+}

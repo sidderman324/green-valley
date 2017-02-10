@@ -1,22 +1,15 @@
-.rest-option__item:last-of-type {
-  display: none;
-}
-
 .rest-option {
 
   &__inner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
     height: 100%;
 
-    h1 {
-      width: 50%;
-    }
     p {
       margin-right: 7%;
       margin-left: 7%;
@@ -24,6 +17,10 @@
   }
 
   &__title {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 25px;
 
     @media (min-width: @screen-l) {
       font-size: 30px;
@@ -51,6 +48,10 @@
     @media (min-width: @screen-m) {
       height: 100%;
       background-image: url(../../img/rest-bgi-768.png);
+    }
+
+    &--hidden {
+      display: none;
     }
   }
 }
