@@ -1,0 +1,32 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/pay-now.less';
+
+
+.pay-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    min-width: 280px;
+    max-width: 380px;
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .bordered-full ();
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+}

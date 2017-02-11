@@ -59,16 +59,16 @@
               <div class="placement-type">
 
                 <div class="placement-type__item">
-                  <label for="placement-hotel" class="placement-type__label">
-                    <span class="placement-type__text main-text  main-text--form">Отель</span>
-                    <input type="checkbox" name="placement-hotel" id="hotel" class="placement-type__input">
+                  <label for="placement-hotel" id="hotel" class="placement-type__label placement-type__label--hotel">
+                    <span class="placement-type__text placement-type__text main-text  main-text--form">Отель</span>
+                    <input type="checkbox" name="placement-hotel" class="placement-type__input">
                   </label>
                 </div>
 
                 <div class="placement-type__item">
-                  <label for="placement-cottage" class="placement-type__label">
-                    <span class="placement-type__text main-text  main-text--form">Коттедж</span>
-                    <input type="checkbox" name="placement-cottage" id="cottage" class="placement-type__input">
+                  <label for="placement-cottage" id="cottage" class="placement-type__label placement-type__label--cottage">
+                    <span class="placement-type__text placement-type__text main-text  main-text--form">Коттедж</span>
+                    <input type="checkbox" name="placement-cottage" class="placement-type__input">
                   </label>
                 </div>
               </div>
@@ -77,38 +77,33 @@
 
           <!-- Шаг 3 выбор типа коттеджа  -->
 
-          <div class="form-item">
+          <div class="form-item  form-item--bg-gray">
+            <div class="form-item__inner">
               <p class="step-number">Шаг 3</p>
               <h2 class="main-title main-title--mini">Тип коттеджа</h2>
               <div class="cottage-type">
 
-                <div class="type-tabs">
-                  <div data-number="1" class="type-tabs__item">
-                    <label for="flagship">
-                      <span class="form-text form-text--active  form-text--upper">Флагман</span>
+                <div class="cottage-type__list">
+                    <label data-number="1" class="cottage-type__item">
+                      <span class="cottage-type__text  cottage-type__text--active  main-text  main-text--form-light">Флагман</span>
+                      <input type="radio" name="cottage-type__input">
                     </label>
-                    <input type="radio" name="cottage-type">
-                  </div>
 
-                  <div data-number="2" class="type-tabs__item">
-                    <label for="laky">
-                      <span class="form-text  form-text--upper">Озерный</span>
+                    <label data-number="2" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Озерный</span>
+                      <input type="radio" name="cottage-type__input">
                     </label>
-                    <input type="radio" name="cottage-type">
-                  </div>
 
-                  <div data-number="3" class="type-tabs__item">
-                    <label for="port">
-                      <span class="form-text  form-text--upper">Портовый</span>
+                    <label data-number="3" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Портовый</span>
+                      <input type="radio" name="cottage-type__input">
                     </label>
-                    <input type="radio" name="cottage-type">
-                  </div>
-                  <div data-number="4" class="type-tabs__item">
-                    <label for="alder">
-                      <span class="form-text  form-text--upper">Ольховка</span>
+
+                    <label data-number="4" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Ольховка</span>
+                      <input type="radio" name="cottage-type__input">
                     </label>
-                    <input type="radio" name="cottage-type">
-                  </div>
+
 
                 </div>
 
@@ -155,60 +150,90 @@
                   </div>
 
                 </div>
+              </div>
             </div>
           </div>
 
           <!-- Шаг 4 Персональная информация -->
 
           <div class="form-item">
+            <div class="form-item__inner">
               <p class="step-number">Шаг 4</p>
               <h2 class="main-title main-title--mini">Персональная информация</h2>
               <div class="personal-info">
-                  <input type="text" name="first-name" id="first-name" class="personal-info-item" placeholder="ИМЯ">
-                  <input type="text" name="surname" id="surname" class="personal-info-item" placeholder="ФАМИЛИЯ">
-                  <input type="text" name="phone" id="phone" class="personal-info-item" placeholder="НОМЕР ТЕЛЕФОНА">
-                  <input type="text" name="e-mail" id="e-mail" class="personal-info-item" placeholder="E-MAIL">
+                  <input type="text" name="first-name" id="first-name" class="personal-info__item  main-text  main-text--form  main-text  main-text--form" placeholder="ИМЯ">
+                  <input type="text" name="surname" id="surname" class="personal-info__item  main-text  main-text--form" placeholder="ФАМИЛИЯ">
+                  <input type="text" name="phone" id="phone" class="personal-info__item  main-text  main-text--form" placeholder="НОМЕР ТЕЛЕФОНА">
+                  <input type="text" name="e-mail" id="e-mail" class="personal-info__item  main-text  main-text--form" placeholder="E-MAIL">
+                  <p class="personal-info__text  main-text  main-text--low">Мы свяжемся с Вами в случае необходимости</p>
+                  <p class="personal-info__text  main-text  main-text--low">На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
               </div>
-              <p class="form-text form-text--gray">Мы свяжемся с Вами в случае необходимости</p>
-              <p class="form-text form-text--gray">На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+            </div>
           </div>
 
           <!-- Шаг 5 выбор способа оплаты -->
 
-          <div class="form-item">
+          <div class="form-item  form-item--bg-gray">
+            <div class="form-item__inner">
               <p class="step-number">Шаг 5</p>
               <h2 class="main-title main-title--mini">Способ оплаты</h2>
 
-              <div action="" class="total-price">
-                  <p class="form-text form-text--gray form-text--upper">К оплате</p>
-                  <p class="form-text form-text--gray">Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
+              <div class="total-price">
+                  <p class="main-text  main-text--form">К оплате</p>
+                  <span class="total-price__cost  main-text  main-text--form">-</span>
+                  <p class="total-price__text  main-text  main-text--low">Пожалуйста, <span>выберите дату</span> въезда и выезда, чтобы увидеть сумму к оплате</p>
               </div>
 
               <div class="payment-type-switcher">
-                <label for="on-arrival">
-                  <input type="radio" id="on-arrival" name="payment-type" class="price-type-switcher__on-arrival">
-                  <p class="form-text form-text--gray form-text--upper">По приезду</p>
-                  <p class="form-text form-text--gray">Вы можете произвести оплату по факту заселения.</p>
-                </label>
+                  <label for="on-arrival" class="payment-type-switcher__on-arrival">
+                    <input type="radio" name="payment-type">
+                    <p class="payment-type-switcher__sublitle  main-text  main-text--form">По приезду</p>
+                    <p class="payment-type-switcher__text  main-text  main-text--form">Вы можете произвести оплату по факту заселения.</p>
+                  </label>
 
                   <div class="payment-type-switcher__bank-card">
-                      <p class="form-text form-text--gray form-text--upper">Сейчас</p>
-                      <p class="form-text form-text--gray">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
-                      <label class="form-text form-text--gray form-text--upper" for="card-number">Номер карты</label>
-                      <input type="number" placeholder="0000 0000 0000 0000" class="card-info-input" id="card-number">
-                      <label class="form-text form-text--gray form-text--upper" for="card-owner-name">Фамилия владельца карты</label>
-                      <input type="text" placeholder="sergey sidorov" class="card-info-input" id="card-owner-name">
-                      <label class="form-text form-text--gray form-text--upper" for="card-CVV">Код CVV</label>
-                      <input type="number" placeholder="123" class="card-info-input" id="card-CVV">
-                      <label class="form-text form-text--gray form-text--upper" for="card-valid-period">Действует до</label>
-                      <input type="number" placeholder="02/16" class="card-info-input" id="card-valid-period">
+
+                      <p class="payment-type-switcher__subtitle  main-text  main-text--form">Сейчас</p>
+
+                      <p class="payment-type-switcher__text  main-text  main-text--form">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+
+
+                      <ul class="pay-now">
+                        <li class="pay-now__item">
+
+                          <label for="card-number" class="pay-now__subtitle  main-text  main-text--form">Номер карты</label>
+                          <input type="number" placeholder="0000 0000 0000 0000" class="pay-now__input  main-text  main-text--form" id="card-number">
+
+                        </li>
+
+                        <li class="pay-now__item">
+
+                          <label for="card-owner-name" class="pay-now__subtitle  main-text  main-text--form">Фамилия владельца карты</label>
+                          <input type="text" placeholder="sergey sidorov" class="pay-now__input  main-text  main-text--form" id="card-owner-name">
+
+                        </li>
+
+                        <li class="pay-now__item">
+
+                          <label for="card-CVV" class="pay-now__subtitle  main-text  main-text--form">Код CVV</label>
+                          <input type="number" placeholder="123" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-CVV">
+
+                        </li>
+
+                        <li class="pay-now__item">
+
+                          <label for="card-valid-period" class="pay-now__subtitle  main-text  main-text--form">Действует до</label>
+                          <input type="number" placeholder="02/16" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-valid-period">
+
+                        </li>
+                      </ul>
+
                   </div>
               </div>
 
           <input type="submit" value="забронировать" class="btn btn--blue">
-
+        </div>
       </form>
-
     </div>
   </section>
 

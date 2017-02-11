@@ -1,0 +1,50 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/cottage-type.less';
+
+
+.cottage-type {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-basis: 100%;
+    margin: 0 -20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+      height: 45px;
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+
+  &__text {
+    font-weight: 500;
+
+    &--active {
+      color: @text-color;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        .sprite(@check);
+        position: absolute;
+        top: 2px;
+        left: -50px;
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

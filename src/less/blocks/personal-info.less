@@ -1,0 +1,32 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/personal-info.less';
+
+
+.personal-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    min-width: 280px;
+    max-width: 380px;
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .bordered-full ();
+    text-align: center;
+
+    &:last-of-type {
+      order: 2;
+    }
+  }
+
+  &__text {
+    width: 280px;
+
+    &:last-of-type {
+      order: 3;
+    }
+  }
+}
