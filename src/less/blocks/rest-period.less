@@ -4,9 +4,25 @@
 .rest-period {
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
+
+  @media (min-width: @screen-m) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @screen-l) {
+    background-color: #fff;
+    padding: 26px 0;
+  }
 
   &__item {
-    margin-top: 30px;
+    padding: 0px 25px 25px 25px;
+
+    @media (min-width: @screen-l) {
+      &:first-of-type {
+        border-right: 0.5px solid #ebebeb;
+      }
+    }
   }
 
   &__input-wrapper {
@@ -22,8 +38,17 @@
     flex-basis: 33%;
     text-align: center;
 
+    @media (min-width: @screen-l) {
+      height: 26px;
+      width: 38px;
+    }
+
     &:last-of-type {
       width: 70px;
+
+      @media (min-width: @screen-l) {
+        width: 50px;
+      }
     }
   }
 }

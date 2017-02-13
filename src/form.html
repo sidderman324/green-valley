@@ -25,11 +25,12 @@
 
           <!-- Шаг 1 выбор даты -->
 
-          <div class="form-item  form-item--bg-gray">
+          <div id="rest-period" class="form-item  form-item--bg-gray">
             <div class="form-item__inner">
               <p class="step-number">Шаг 1</p>
               <h2 class="main-title main-title--mini">Дата отдыха</h2>
               <div class="rest-period">
+
                 <div class="rest-period__item">
                     <p class="main-text main-text--form">Дата въезда</p>
                       <div class="rest-period__input-wrapper">
@@ -38,6 +39,7 @@
                           <input type="number" maxlength="4" class="rest-period__input  main-text main-text--form-blue" placeholder="ГГГГ">
                       </div>
                 </div>
+
                 <div class="rest-period__item">
                       <p class="main-text main-text--form">Дата выезда</p>
                       <div class="rest-period__input-wrapper">
@@ -46,6 +48,7 @@
                           <input type="number" maxlength="4" class="rest-period__input  main-text main-text--form-blue" placeholder="ГГГГ">
                       </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -59,16 +62,16 @@
               <div class="placement-type">
 
                 <div class="placement-type__item">
-                  <label for="placement-hotel" id="hotel" class="placement-type__label placement-type__label--hotel">
+                  <label for="placement-hotel" class="placement-type__label placement-type__label--hotel">
                     <span class="placement-type__text placement-type__text main-text  main-text--form">Отель</span>
-                    <input type="checkbox" name="placement-hotel" class="placement-type__input">
+                    <input type="radio" name="placement-type" class="placement-type__input">
                   </label>
                 </div>
 
                 <div class="placement-type__item">
-                  <label for="placement-cottage" id="cottage" class="placement-type__label placement-type__label--cottage">
+                  <label for="placement-cottage" class="placement-type__label placement-type__label--cottage">
                     <span class="placement-type__text placement-type__text main-text  main-text--form">Коттедж</span>
-                    <input type="checkbox" name="placement-cottage" class="placement-type__input">
+                    <input type="radio" name="placement-type" class="placement-type__input">
                   </label>
                 </div>
               </div>
@@ -104,48 +107,87 @@
                       <input type="radio" name="cottage-type__input">
                     </label>
 
-
                 </div>
 
                 <div class="cottage-advantages">
 
-                  <div data-number="1" class="cottage-advantages__item">
+                  <div data-number="1" class="cottage-advantages__item  cottage-advantages__item--visible">
                       <ul class="cottage-advantages__list">
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 100 м2</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">3 комнаты</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">5 спальных мест</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Раздельный санузел</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 100 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">3 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">5 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
                       </ul>
                   </div>
 
                   <div data-number="2" class="cottage-advantages__item">
                       <ul class="cottage-advantages__list">
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">2 раздельных санузла</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
                       </ul>
                   </div>
 
                   <div data-number="3" class="cottage-advantages__item">
                       <ul class="cottage-advantages__list">
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">2 раздельных санузла</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
                       </ul>
                   </div>
 
                   <div data-number="4" class="cottage-advantages__item">
                       <ul class="cottage-advantages__list">
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Площадь 220 м2</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">6 комнаты</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">7 спальных мест</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">2 раздельных санузла</li>
-                          <li class="cottage-advantages__list-item form-text form-text--upper">Wi-Fi</li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">2 раздельных санузла</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
                       </ul>
                   </div>
 
@@ -177,70 +219,71 @@
             <div class="form-item__inner">
               <p class="step-number">Шаг 5</p>
               <h2 class="main-title main-title--mini">Способ оплаты</h2>
+              <div class="payment-type">
 
-              <div class="total-price">
-                  <p class="main-text  main-text--form">К оплате</p>
-                  <span class="total-price__cost  main-text  main-text--form">-</span>
-                  <p class="total-price__text  main-text  main-text--low">Пожалуйста, <span>выберите дату</span> въезда и выезда, чтобы увидеть сумму к оплате</p>
+                <div class="total-price">
+                    <p class="main-text  main-text--form">К оплате</p>
+                    <span class="total-price__cost  main-text  main-text--form">-</span>
+                    <p class="total-price__text  main-text  main-text--low">Пожалуйста, <a href="#rest-period">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+                </div>
+
+                <div class="payment-type__switcher">
+                    <label for="on-arrival" class="payment-type__on-arrival">
+                      <input type="radio" name="payment-type">
+                      <p class="payment-type__subtitle  main-text  main-text--form">По приезду</p>
+                      <p class="payment-type__text  main-text  main-text--form">Вы можете произвести оплату по факту заселения.</p>
+                    </label>
+
+                    <div class="payment-type__bank-card">
+
+                        <p class="payment-type__subtitle  payment-type__subtitle--active  main-text  main-text--form">Сейчас</p>
+
+                        <p class="payment-type__text  main-text  main-text--form">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+
+
+                        <ul class="pay-now">
+                          <li class="pay-now__item">
+
+                            <label for="card-number" class="pay-now__subtitle  main-text  main-text--form">Номер карты</label>
+                            <input type="number" placeholder="0000-0000-0000-0000" class="pay-now__input  main-text  main-text--form" id="card-number">
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-owner-name" class="pay-now__subtitle  main-text  main-text--form">Фамилия владельца карты</label>
+                            <input type="text" placeholder="sergey sidorov" class="pay-now__input  main-text  main-text--form" id="card-owner-name">
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-CVV" class="pay-now__subtitle  main-text  main-text--form">Код CVV</label>
+                            <input type="number" placeholder="123" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-CVV">
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-valid-period" class="pay-now__subtitle  main-text  main-text--form">Действует до</label>
+                            <input type="number" placeholder="02/16" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-valid-period">
+
+                          </li>
+                        </ul>
+
+                    </div>
+                </div>
+
               </div>
-
-              <div class="payment-type-switcher">
-                  <label for="on-arrival" class="payment-type-switcher__on-arrival">
-                    <input type="radio" name="payment-type">
-                    <p class="payment-type-switcher__sublitle  main-text  main-text--form">По приезду</p>
-                    <p class="payment-type-switcher__text  main-text  main-text--form">Вы можете произвести оплату по факту заселения.</p>
-                  </label>
-
-                  <div class="payment-type-switcher__bank-card">
-
-                      <p class="payment-type-switcher__subtitle  main-text  main-text--form">Сейчас</p>
-
-                      <p class="payment-type-switcher__text  main-text  main-text--form">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
-
-
-                      <ul class="pay-now">
-                        <li class="pay-now__item">
-
-                          <label for="card-number" class="pay-now__subtitle  main-text  main-text--form">Номер карты</label>
-                          <input type="number" placeholder="0000 0000 0000 0000" class="pay-now__input  main-text  main-text--form" id="card-number">
-
-                        </li>
-
-                        <li class="pay-now__item">
-
-                          <label for="card-owner-name" class="pay-now__subtitle  main-text  main-text--form">Фамилия владельца карты</label>
-                          <input type="text" placeholder="sergey sidorov" class="pay-now__input  main-text  main-text--form" id="card-owner-name">
-
-                        </li>
-
-                        <li class="pay-now__item">
-
-                          <label for="card-CVV" class="pay-now__subtitle  main-text  main-text--form">Код CVV</label>
-                          <input type="number" placeholder="123" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-CVV">
-
-                        </li>
-
-                        <li class="pay-now__item">
-
-                          <label for="card-valid-period" class="pay-now__subtitle  main-text  main-text--form">Действует до</label>
-                          <input type="number" placeholder="02/16" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="card-valid-period">
-
-                        </li>
-                      </ul>
-
-                  </div>
-              </div>
-
-          <input type="submit" value="забронировать" class="btn btn--blue">
-        </div>
+              <input type="submit" value="забронировать" class="btn btn--blue">
+            </div>
+          </div>
       </form>
-    </div>
   </section>
 
   <!-- Footer -->
   @@include('_include/page-footer.html')
   <script src="js/script.min.js"></script>
-
 
   </body>
 

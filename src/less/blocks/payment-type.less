@@ -1,0 +1,65 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/payment-type-switcher.less';
+
+
+.payment-type {
+  margin-bottom: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    display: none;
+  }
+
+  &__subtitle {
+    padding-left: 75px;
+    font-weight: 500;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      .sprite(@check-gray);
+      position: absolute;
+      top: 1px;
+      left: 40px;
+    }
+
+    &--active:before {
+      .sprite(@check);
+    }
+  }
+
+  &__on-arrival {
+    .bordered-full();
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    margin: 30px 0 20px 0;
+
+    input {
+      display: none;
+    }
+  }
+
+  &__bank-card {
+    .bordered-full();
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    // margin: 0 -20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  &__text {
+    display: none;
+  }
+}

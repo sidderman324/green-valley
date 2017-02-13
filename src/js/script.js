@@ -5,9 +5,9 @@ $(document).ready(function(){
   });
 
 // Табы промо
-  $('.type-tab__item').on('click', function(event){
+  $('.type-tab__link').on('click', function(event){
     event.preventDefault();
-    $('.type-tab__item a').toggleClass('type-tab__link--active');
+    $('.type-tab__link').toggleClass('type-tab__link--active');
     $('.rest-type-head').toggleClass('rest-type-head--hidden');
     $('.rest-option__item').toggleClass('rest-option__item--hidden');
   });

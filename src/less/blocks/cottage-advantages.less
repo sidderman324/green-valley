@@ -2,5 +2,78 @@
 
 
 .cottage-advantages {
-  display: none;
+
+  &__item {
+    display: none;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+
+    &--visible {
+      @media (min-width: @screen-m) {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  &__list-item {
+    display: inline-block;
+    list-style-type: none;
+    flex-basis: 20%;
+    position: relative;
+
+  }
+
+  &__text {
+    display: inline-block;
+    width: 80px;
+    min-height: 35px;
+    padding-top: 60px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 48px;
+    }
+
+    &--square:before {
+      .sprite(@adv-square);
+      left: 16px;
+    }
+
+    &--rooms:before {
+      .sprite(@adv-rooms);
+      left: 27px;
+    }
+
+    &--beds:before {
+      .sprite(@adv-beds);
+      left: 15px;
+    }
+
+    &--bath:before {
+      .sprite(@adv-bath);
+      left: 15px;
+    }
+
+    &--wifi:before {
+      .sprite(@adv-wifi);
+      left: 15px;
+    }
+  }
 }

@@ -2,14 +2,25 @@
 
 
 .placement-type {
-  .bordered ();
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   box-sizing: border-box;
   padding: 20px 0;
   margin-top: 20px;
-  width: 100%;
+  min-width: 280px;
+
+  @media (max-width: @screen-l) {
+    .bordered ();
+  }
+
+  @media (min-width: @screen-m) {
+    min-width: 380px;
+  }
+
+  @media (min-width: @screen-l) {
+    border: 0;
+  }
 
   &__item {
     box-sizing: border-box;

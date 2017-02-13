@@ -5,6 +5,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
 
   &__list {
     background-color: #fff;
@@ -12,11 +13,18 @@
     padding-bottom: 40px;
     flex-basis: 100%;
     margin: 0 -20px;
-    margin-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: @screen-m) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
 
   &__item {
@@ -24,6 +32,19 @@
       display: block;
       width: 100%;
       text-align: center;
+
+      @media (min-width: @screen-m) {
+        height: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 0.5px solid #ebebeb;
+
+        &:last-of-type {
+          border: 0;
+        }
+      }
   }
 
   &__text {
@@ -40,6 +61,11 @@
         position: absolute;
         top: 2px;
         left: -50px;
+
+        @media(min-width: @screen-m) {
+          left: 20px;
+          top: 28px;
+        }
       }
     }
   }
