@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+      @@include('_include/head.html')
 </head>
 
 <body>
@@ -150,33 +146,41 @@
     <!-- Галерея с фотографиями -->
 
     <div class="gallery">
-        <div class="gallety__inner">
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-          <div class="gallery__item">
-            <img src="" alt="" class="gallery__photo">
-          </div>
-
+      <div class="gallery__inner">
+        <div class="gallery__main-img">
+          <img src="img/gallery-1.png" alt="" id="gallery-main-img">
         </div>
+        <div class="owl-carousel" id="gallery-preview">
+
+            <div class="gallery__item">
+              <img src="img/gallery-1.png" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-1.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-2.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-3.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-econom.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-1.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-2.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-3.jpg" alt="" class="gallery__main-photo">
+            </div>
+            <div class="gallery__item">
+              <img src="img/g-econom.jpg" alt="" class="gallery__main-photo">
+            </div>
+        </div>
+      </div>
     </div>
 
     <!-- Отзывы посетителей -->
@@ -314,14 +318,14 @@
     <section class="placement-select">
       <div class="placement-select__inner">
         <h2 class="main-title main-title--white">Где вы хотите отдохнуть?</h2>
-        <a href="#" class="placement-card">
+        <a href="rooms-list.html" class="placement-card">
           <div class="placement-card__img-wrapper">
             <img src="./img/hotel.png" alt="" class="placement-card__img">
           </div>
             <h3 class="placement-card__subtitle">В отеле</h3>
             <p class="price price--number">от <span>4000</span> руб./сутки</p>
         </a>
-        <a href="#" class="placement-card">
+        <a href="rooms-list.html" class="placement-card">
           <div class="placement-card__img-wrapper">
             <img src="./img/cottage.png" alt="" class="placement-card__img">
           </div>

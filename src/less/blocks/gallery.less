@@ -1,8 +1,11 @@
 .gallery {
-  // display: none;
   margin-bottom: 46px;
 
   &__inner {
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l ();
+    }
   }
 
   &__photo-item {
