@@ -20,34 +20,39 @@ $(document).ready(function(){
     event.preventDefault();
     $('.review-card').fadeIn(400).css('display', 'flex');
   });
-});
 
-// gallery
+  $('#gallery-preview').owlCarousel({
+    center: true,
+    loop: true,
+    items: 6,
+  });
 
-$('#gallery-preview').owlCarousel({
-  center: true,
-  loop: true,
-  items: 6,
-  responsive : {
-    320 : {
-      items: 1
-    },
-    // breakpoint from 768 up
-    768 : {
+  $(document).on('click', '.owl-item', function(){
+        var carousel = $('.owl-carousel');
+        n = $(this).index();
+        console.log(n);
+        carousel.toggle('to.owl.carousel', n);
+  });
 
-    }
-}
-});
+  $('#gallery-preview img').on('click', function(event){
+    var imgSrc = $(this).attr('src');
+    $(this).addClass('center');
+    $('#gallery-main-img').attr('src', imgSrc);
+  });
 
-$(document).on('click', '.owl-item', function(){
-      var carousel = $('.owl-carousel');
-      n = $(this).index();
-      console.log(n);
-      carousel.toggle('to.owl.carousel', n);
-});
+  $('#reviewCard').owlCarousel({
+    items: 2,
+    loop: true,
+    startPosition: 2,
+  });
 
-$('#gallery-preview img').on('click', function(event){
-  var imgSrc = $(this).attr('src');
-  $(this).addClass('center');
-  $('#gallery-main-img').attr('src', imgSrc);
+  $('#reviewNext').click(function(e){
+    e.preventDefault();
+    $('#reviewCard').trigger('next.owl.carousel',[300]);
+  })
+  $('#reviewPrev').click(function(e){
+    e.preventDefault();
+    $('#reviewCard').trigger('next.owl.carousel',[300]);
+  })
+
 });
