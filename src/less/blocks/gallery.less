@@ -8,7 +8,52 @@
     }
   }
 
-  &__photo-item {
+  &__item {
+    display: inline-block;
+
+    @media (min-width: @screen-m) {
+      height: 75px;
+    }
+
+    @media (min-width: @screen-l) {
+      min-height: 115px;
+    }
+  }
+
+  &__main-wrapper {
+
+    @media (min-width: @screen-m) {
+      height: 325px;
+    }
+
+    @media (min-width: @screen-l) {
+      height: 500px;
+    }
+  }
+
+  &__thumbs-wrapper {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .owl-stage {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__main-photo {
     width: 100%;
+    height: 100%;
+  }
+
+  &__photo-thumbs {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

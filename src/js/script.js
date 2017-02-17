@@ -24,31 +24,30 @@ $(document).ready(function(){
 
 // gallery
 
-
 $('#gallery-preview').owlCarousel({
   center: true,
   loop: true,
   items: 6,
-});
+  responsive : {
+    320 : {
+      items: 1
+    },
+    // breakpoint from 768 up
+    768 : {
 
-$('#gallery-preview').on('click', '.owl-item', function(e) {
-    e.preventDefault();
-    var carousel = $('#gallery-preview').data('owl.carousel');
-    carousel.to(carousel.relative($(this).index()));
+    }
+}
 });
 
 $(document).on('click', '.owl-item', function(){
-      var carousel = $('.owl-carousel')
+      var carousel = $('.owl-carousel');
       n = $(this).index();
-      console.log(n)
-      carousel.trigger('owl.goTo', n);
+      console.log(n);
+      carousel.toggle('to.owl.carousel', n);
 });
 
-
 $('#gallery-preview img').on('click', function(event){
-  // $(this)
   var imgSrc = $(this).attr('src');
-  // n = $(this).index();
-  // console.log(n);
+  $(this).addClass('center');
   $('#gallery-main-img').attr('src', imgSrc);
 });

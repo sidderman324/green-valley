@@ -8,6 +8,13 @@
     padding-bottom: 65px;
   }
 
+  &__inner {
+
+    // @media (min-width: @screen-l) {
+    //   .inner-screen-l();
+    // }
+  }
+
   &__title {
     margin-right: 10%;
     margin-left: 10%;
@@ -16,6 +23,7 @@
 
   &__map {
     width: 100%;
+    display: block;
 
     @media (min-width: @screen-l) {
       .inner-screen-l();
@@ -27,6 +35,8 @@
     margin-top: 30px;
 
     @media (min-width: @screen-l) {
+      .inner-screen-l();
+      margin-top: 30px;
       display: flex;
       flex-direction: row;
       // align-items: flex-start;
