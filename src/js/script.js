@@ -46,13 +46,20 @@ $(document).ready(function(){
     startPosition: 2,
   });
 
-  $('#reviewNext').click(function(e){
-    e.preventDefault();
-    $('#reviewCard').trigger('next.owl.carousel',[300]);
+  $('#singleRoomGallery').owlCarousel({
+    items: 1,
+    loop: true,
   })
-  $('#reviewPrev').click(function(e){
+
+  $('#arrowNext').click(function(e){
     e.preventDefault();
     $('#reviewCard').trigger('next.owl.carousel',[300]);
+    $('#singleRoomGallery').trigger('next.owl.carousel',[300]);
+  })
+  $('#arrowPrev').click(function(e){
+    e.preventDefault();
+    $('#reviewCard').trigger('prev.owl.carousel',[300]);
+    $('#singleRoomGallery').trigger('prev.owl.carousel',[300]);
   })
 
 });

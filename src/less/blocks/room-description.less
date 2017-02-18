@@ -31,6 +31,7 @@
   &__gallery {
     margin-left: -20px;
     margin-right: -20px;
+    position: relative;
     @media (min-width: @screen-l) {
       flex-basis: 50%;
       width: 580px;
@@ -38,6 +39,12 @@
       // align-self: flex-end;
       order: 3;
     }
+  }
+
+  &__arrow-btn {
+
+    .arrow-btn-mix();
+    z-index: 10;
   }
 
   &__info-block {
