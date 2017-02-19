@@ -20,7 +20,7 @@ $(document).ready(function(){
         items: 1,
         center: true,
         loop: true,
-      }
+      },
       768 : {
         center: true,
         loop: true,
@@ -48,18 +48,31 @@ $(document).ready(function(){
     startPosition: 2,
   });
 
+  $(function(){
+    var windowWidth = $(window).width();
+      if ( windowWidth < 1199 ) {
+        $('#reviewCard').trigger('destroy.owl.carousel');
+      }
+      if ( windowWidth > 1199 ) {
+        $('#reviewCard').trigger('add.owl.carousel');
+      }
+  });
+
+
+
   $('#reviewAll').on('click', function(event){
     event.preventDefault();
     $('#reviewCard').trigger('destroy.owl.carousel');
     $('.review__card-wrapper').css({
       "width": "100%",
     });
-    $('.owl-stage-outer').css({
+    $('.review__card-wrapper  .owl-stage-outer').css({
       "width" : "100%",
       "display" : "flex",
       "flex-direction" : "row",
       "flex-wrap" : "wrap",
       "justify-content" : "center",
+      "align-items" : "center",
     });
     $('.review__arrow-btn').css({
       "display" : "none",
