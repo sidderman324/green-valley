@@ -4,15 +4,36 @@ $(document).ready(function(){
     $('#nav').toggle(400);
   });
 
-// Табы промо
+
+  $('.rest-option').owlCarousel({
+    items : 1,
+    // loop : true,
+  });
+
+  $('.rest-type-switcher__head').owlCarousel({
+    items : 1,
+    // loop : true,
+  });
+
   $('.type-tab__link').on('click', function(event){
     event.preventDefault();
-      if(!$(this).hasClass('type-tab__link--active')) {
-        $('.type-tab__link').toggleClass('type-tab__link--active');
-        $('.rest-type-head').toggleClass('rest-type-head--hidden');
-        $('.rest-option__item').toggleClass('rest-option__item--hidden');
-      }
+    if(!$(this).hasClass('type-tab__link--active')) {
+      $('.type-tab__link').toggleClass('type-tab__link--active');
+
+    }
   });
+
+  $('#restFamily').click(function(){
+    $('.rest-option').trigger('prev.owl.carousel', [200]);
+    $('.rest-type-switcher__head').trigger('prev.owl.carousel', [200]);
+  });
+
+  $('#restCompany').click(function(){
+    $('.rest-option').trigger('next.owl.carousel', [200]);
+    $('.rest-type-switcher__head').trigger('next.owl.carousel', [200]);
+  });
+
+
 
   $('#gallery-preview').owlCarousel({
     responsive : {
