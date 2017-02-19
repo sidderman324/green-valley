@@ -14,25 +14,18 @@ $(document).ready(function(){
       }
   });
 
-
-// Показать все отзывы
-  $('#reviewAll').on('click', function(event){
-    event.preventDefault();
-    $('.review-card').fadeIn(400).css('display', 'flex');
-  });
-
   $('#gallery-preview').owlCarousel({
     center: true,
     loop: true,
     items: 6,
   });
 
-  $(document).on('click', '.owl-item', function(){
-        var carousel = $('.owl-carousel');
-        n = $(this).index();
-        console.log(n);
-        carousel.toggle('to.owl.carousel', n);
-  });
+  // $(document).on('click', '.owl-item', function(){
+  //       var carousel = $('.owl-carousel');
+  //       n = $(this).index();
+  //       console.log(n);
+  //       carousel.toggle('to.owl.carousel', n);
+  // });
 
   $('#gallery-preview img').on('click', function(event){
     var imgSrc = $(this).attr('src');
@@ -42,24 +35,51 @@ $(document).ready(function(){
 
   $('#reviewCard').owlCarousel({
     items: 2,
-    loop: true,
-    startPosition: 2,
+    responsive : {
+
+      1199 : {
+        items: 2,
+        loop: true,
+        startPosition: 2,
+      }
+    }
+
+  });
+
+  $('#reviewAll').on('click', function(event){
+    event.preventDefault();
+    $('#reviewCard').trigger('destroy.owl.carousel');
+    $('.review__card-wrapper').css({
+      "width": "100%",
+    });
+    $('.owl-stage-outer').css({
+      "width" : "100%",
+      "display" : "flex",
+      "flex-direction" : "row",
+      "flex-wrap" : "wrap",
+      "justify-content" : "center",
+    });
+    $('.review__arrow-btn').css({
+      "display" : "none",
+    });
+    $('.review-card').fadeIn(400).css('display', 'flex');
   });
 
   $('#singleRoomGallery').owlCarousel({
     items: 1,
     loop: true,
-  })
+  });
 
   $('#arrowNext').click(function(e){
     e.preventDefault();
     $('#reviewCard').trigger('next.owl.carousel',[300]);
     $('#singleRoomGallery').trigger('next.owl.carousel',[300]);
-  })
+  });
+
   $('#arrowPrev').click(function(e){
     e.preventDefault();
     $('#reviewCard').trigger('prev.owl.carousel',[300]);
     $('#singleRoomGallery').trigger('prev.owl.carousel',[300]);
-  })
+  });
 
 });
