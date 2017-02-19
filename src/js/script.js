@@ -15,9 +15,18 @@ $(document).ready(function(){
   });
 
   $('#gallery-preview').owlCarousel({
-    center: true,
-    loop: true,
-    items: 6,
+    responsive : {
+      320 : {
+        items: 1,
+        center: true,
+        loop: true,
+      }
+      768 : {
+        center: true,
+        loop: true,
+        items: 6,
+      }
+    }
   });
 
   // $(document).on('click', '.owl-item', function(){
