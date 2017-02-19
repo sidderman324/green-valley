@@ -44,22 +44,33 @@
     justify-content: flex-start;
     position: relative;
 
+    &--active:after {
+      content: '';
+      display: inline-block;
+      .sprite(@check);
+      position: absolute;
+      bottom: -7px;
+      right: 40px;
+    }
+
     &:before {
       content: '';
       display: block;
       margin-top: 10px;
       position: absolute;
       top: 15px;
-
+      opacity: 0.5;
     }
 
     &--hotel:before {
       .sprite(@hotel);
-      opacity: 1;
     }
 
     &--cottage:before {
       .sprite(@cottage);
+    }
+
+    &--active:before {
       opacity: 1;
     }
   }

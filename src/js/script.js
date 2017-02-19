@@ -7,19 +7,16 @@ $(document).ready(function(){
 
   $('.rest-option').owlCarousel({
     items : 1,
-    // loop : true,
   });
 
   $('.rest-type-switcher__head').owlCarousel({
     items : 1,
-    // loop : true,
   });
 
   $('.type-tab__link').on('click', function(event){
     event.preventDefault();
     if(!$(this).hasClass('type-tab__link--active')) {
       $('.type-tab__link').toggleClass('type-tab__link--active');
-
     }
   });
 
@@ -122,6 +119,14 @@ $(document).ready(function(){
     items: 1,
     loop: true,
     dots: true,
+  });
+
+
+  $('.placement-type__label').on('click', function(event){
+    event.preventDefault();
+    if(!$(this).hasClass('placement-type__label--active')) {
+      $('.placement-type__label').toggleClass('placement-type__label--active');
+    }
   });
 
 });
