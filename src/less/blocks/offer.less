@@ -11,4 +11,29 @@
       .inner-screen-l();
     }
   }
+
+  &__wrapper {
+
+    .owl-dots {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .owl-dot span {
+      .orange-dots ();
+    }
+
+    .active span {
+      display: inline-block;
+      background-color: @text-orange;
+    }
+
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l();
+    }
+  }
 }

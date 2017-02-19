@@ -35,15 +35,8 @@ $(document).ready(function(){
 
   $('#reviewCard').owlCarousel({
     items: 2,
-    responsive : {
-
-      1199 : {
-        items: 2,
-        loop: true,
-        startPosition: 2,
-      }
-    }
-
+    loop: true,
+    startPosition: 2,
   });
 
   $('#reviewAll').on('click', function(event){
@@ -80,6 +73,12 @@ $(document).ready(function(){
     e.preventDefault();
     $('#reviewCard').trigger('prev.owl.carousel',[300]);
     $('#singleRoomGallery').trigger('prev.owl.carousel',[300]);
+  });
+
+  $('.offer__wrapper').owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true,
   });
 
 });
