@@ -129,4 +129,12 @@ $(document).ready(function(){
     }
   });
 
+
+  $('.cottage-type__text').on('click', function(event){
+    event.preventDefault();
+    $('.cottage-type__text').removeClass('cottage-type__text--active');
+    !$(this).addClass('cottage-type__text--active');
+  });
+
+
 });

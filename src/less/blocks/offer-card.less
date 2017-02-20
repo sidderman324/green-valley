@@ -4,13 +4,16 @@
   margin-top: 33px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: -180px 0;
   display: inline-block;
   box-sizing: border-box;
 
   &--may {
     background-image: url(../../img/bgr-offer-1.png);
-    background-size: 102%;
+    @media (min-width: @screen-m) {
+      background-position: 0 0;
+      background-size: 102%;
+    }
   }
   &--all-in {
     background-image: url(../../img/bgr-offer-2.png);
