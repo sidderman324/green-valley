@@ -33,6 +33,7 @@
     margin-right: -20px;
     position: relative;
     width: 100%;
+    align-self: flex-start;
 
     .owl-item {
       width: 100%;
@@ -49,6 +50,14 @@
   &__arrow-btn {
 
     .arrow-btn-mix();
+    z-index: 10;
+  }
+
+  &__loupe {
+    .sprite(@loupe);
+    position: absolute;
+    right: 25px;
+    top: 20px;
     z-index: 10;
   }
 

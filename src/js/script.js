@@ -114,6 +114,13 @@ $(document).ready(function(){
     $('#reviewCard').trigger('prev.owl.carousel',[300]);
     $('#singleRoomGallery').trigger('prev.owl.carousel',[300]);
   });
+  // 
+  // $('#loupe').click(function(e){
+  //   e.preventDefault();
+  //
+  //
+  // });
+
 
   $('.offer__wrapper').owlCarousel({
     items: 1,

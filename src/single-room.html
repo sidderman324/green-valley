@@ -13,8 +13,12 @@
 </head>
 
 <body>
-@@include('_include/page-header.html')
+  <div class="modal__wrapper">
+    <div class="modalbox">
+      <img src="" alt="" class="modal__img">
+    </div>
 
+@@include('_include/page-header.html')
   <section class="room-description">
     <div class="room-description__inner">
       <h1 class="main-title">Эконом</h1>
@@ -31,6 +35,8 @@
             <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
             <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
         </div>
+
+        <a href="#" class="room-description__loupe" id="loupe"></a>
 
         <a href="#" class="room-description__arrow-btn  room-description__arrow-btn--next" id="arrowNext"></a>
       </div>
@@ -96,6 +102,8 @@
   <!-- Footer -->
   @@include('_include/page-footer.html')
   <script src="js/script.min.js"></script>
+</div>
+
 </body>
 
 </html>
