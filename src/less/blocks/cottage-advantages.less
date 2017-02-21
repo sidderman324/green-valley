@@ -3,20 +3,31 @@
 
 .cottage-advantages {
 
-  &__item {
-    .form-wrapper();
+  &--hidden {
     display: none;
+  }
+
+  &__item {
+    display: flex;
+    .form-wrapper();
     background-color: #fff;
     margin-top: 20px;
     margin-left: -20px;
     margin-right: -20px;
+    padding: 20px;
 
-    &--visible {
-      @media (min-width: @screen-m) {
-        display: flex;
-        flex-direction: row;
-      }
+    @media (max-width: @screen-m) {
+      display: none;
     }
+
+    @media (min-width: @screen-m) {
+      flex-direction: row;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
   }
 
   &__list {

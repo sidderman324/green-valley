@@ -9,24 +9,28 @@
   margin-top: 25px;
 
   &__list {
+    display: flex;
     .form-wrapper();
     background-color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
     flex-basis: 100%;
     margin: 0 -20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     @media (min-width: @screen-m) {
-      display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       padding-top: 25px;
       padding-bottom: 25px;
     }
+
+    &--hidden {
+      display: none;
+    }
+
   }
 
   &__item {
@@ -35,6 +39,7 @@
       display: block;
       width: 100%;
       text-align: center;
+      text-decoration: none;
 
       @media (min-width: @screen-m) {
         height: 85px;
