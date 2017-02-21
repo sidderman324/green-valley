@@ -32,6 +32,7 @@
 
 .arrow-btn-mix {
   display: none;
+  cursor: pointer;
 
   @media (min-width: @screen-m) {
     display: inline-block;
@@ -41,6 +42,14 @@
     border-left: 2px solid #fff;
     position: absolute;
   }
+  @media (min-width: @screen-l) {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      position: absolute;
+    }
   &--next {
     transform: rotate(225deg);
     right: 25px;

@@ -7,10 +7,14 @@ $(document).ready(function(){
 
   $('.rest-option').owlCarousel({
     items : 1,
+    touchDrag: false,
+    pullDrag: false,
   });
 
   $('.rest-type-switcher__head').owlCarousel({
     items : 1,
+    touchDrag: false,
+    pullDrag: false,
   });
 
   $('.type-tab__link').on('click', function(event){
@@ -114,15 +118,9 @@ $(document).ready(function(){
     $('#reviewCard').trigger('prev.owl.carousel',[300]);
     $('#singleRoomGallery').trigger('prev.owl.carousel',[300]);
   });
-  // 
-  // $('#loupe').click(function(e){
-  //   e.preventDefault();
-  //
-  //
-  // });
 
 
-  $('.offer__wrapper').owlCarousel({
+  $('#offer').owlCarousel({
     items: 1,
     loop: true,
     dots: true,
@@ -143,5 +141,26 @@ $(document).ready(function(){
     !$(this).addClass('cottage-type__text--active');
   });
 
+  $('#loupe').on('click', function(e){
+    e.preventDefault();
+    $('.modal__img').attr('src', $('#singleRoomGallery .active .room-description__photo-item').attr('src'));
+    $('#modal').fadeIn(800).css({
+      "display" : "flex",
+    })
+  });
+
+  $('#loupeClose').on('click', function(e){
+    e.preventDefault();
+    $('#modal').fadeOut(800).css({
+      "display" : "none",
+    })
+  });
+
+  $('#modal').on('click', function(e){
+    e.preventDefault();
+    $('#modal').fadeOut(800).css({
+      "display" : "none",
+    })
+  });
 
 });

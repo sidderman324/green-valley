@@ -29,21 +29,46 @@
   }
 
   &__gallery {
+    display: block;
     margin-left: -20px;
     margin-right: -20px;
     position: relative;
     width: 100%;
-    align-self: flex-start;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @media (min-width: @screen-m) {
+      height: 520px;
+    }
 
     .owl-item {
-      width: 100%;
+      width: auto;
+      overflow: hidden;
     }
     @media (min-width: @screen-l) {
+      align-self: flex-start;
       flex-basis: 50%;
       width: 580px;
       height: 400px;
       // align-self: flex-end;
       order: 3;
+    }
+  }
+
+  &__gallery-wrapper {
+    // width: 100vh;
+  }
+
+  &__photo-item {
+
+    @media (min-width: @screen-m) {
+      height: 520px;
+      width: auto;
+    }
+
+    @media (min-width: @screen-l) {
+      height: 400px;
+      width: auto;
     }
   }
 
@@ -54,16 +79,24 @@
   }
 
   &__loupe {
-    .sprite(@loupe);
-    position: absolute;
-    right: 25px;
-    top: 20px;
-    z-index: 10;
+    display: none;
+
+    @media (min-width: @screen-m) {
+      display: inline-block;
+      .sprite(@loupe);
+      position: absolute;
+      right: 25px;
+      top: 20px;
+      z-index: 10;
+      cursor: pointer;
+    }
   }
 
   &__info-block {
+    margin-top: 30px;
 
     @media (min-width: @screen-l) {
+      margin-top: 0;
       flex-basis: 50%;
       align-self: flex-start;
       order: 2;

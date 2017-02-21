@@ -13,12 +13,9 @@
 </head>
 
 <body>
-  <div class="modal__wrapper">
-    <div class="modalbox">
-      <img src="" alt="" class="modal__img">
-    </div>
 
 @@include('_include/page-header.html')
+
   <section class="room-description">
     <div class="room-description__inner">
       <h1 class="main-title">Эконом</h1>
@@ -29,14 +26,14 @@
         <a href="#" class="room-description__arrow-btn  room-description__arrow-btn--prev" id="arrowPrev"></a>
 
         <div class="room-description__gallery-wrapper" id="singleRoomGallery">
-            <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
-            <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
-            <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
-            <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
-            <img src="./img/room-about-768.png" alt="" class="gallery__photo-item">
+            <img src="./img/gallery-img-1.jpg" alt="" class="room-description__photo-item">
+            <img src="./img/g-2.jpg" alt="" class="room-description__photo-item">
+            <img src="./img/g-3.jpg" alt="" class="room-description__photo-item">
+            <img src="./img/room-about-768.png" alt="" class="room-description__photo-item">
+            <img src="./img/room-about-768.png" alt="" class="room-description__photo-item">
         </div>
 
-        <a href="#" class="room-description__loupe" id="loupe"></a>
+        <span class="room-description__loupe" id="loupe"></span>
 
         <a href="#" class="room-description__arrow-btn  room-description__arrow-btn--next" id="arrowNext"></a>
       </div>
@@ -63,6 +60,14 @@
               <li class="room-description__list-item main-text">Завтрак и обед "шведский стол"</li>
             </ul>
           </div>
+
+          <div class="modal" id="modal">
+            <div class="modal__img-wrapper">
+                <img src="./img/room-about-768.png" alt="" class="modal__img">
+                <span class="modal__loupe-close" id="loupeClose"></span>
+            </div>
+          </div>
+
     </div>
 
     <a href="form.html" id="booking-form" class="room-description__btn  main-contacts__btn btn btn--bg-orange  btn--icon-calendar"> <span></span>Забронировать</a>
@@ -83,16 +88,16 @@
       </a>
       <a href="#" class="placement-card placement-card--bdr-gray">
         <div class="placement-card__img-wrapper">
-          <img src="./img/hotel.png" alt="" class="placement-card__img">
+          <img src="./img/stand+.png" alt="" class="placement-card__img">
         </div>
-          <h3 class="placement-card__subtitle">В отеле</h3>
+          <h3 class="placement-card__subtitle">Стандарт +</h3>
           <p class="price price--number">от <span>4000</span> руб./сутки</p>
       </a>
       <a href="#" class="placement-card placement-card--bdr-gray">
         <div class="placement-card__img-wrapper">
-          <img src="./img/hotel.png" alt="" class="placement-card__img">
+          <img src="./img/lux.png" alt="" class="placement-card__img">
         </div>
-          <h3 class="placement-card__subtitle">В отеле</h3>
+          <h3 class="placement-card__subtitle">Люкс</h3>
           <p class="price price--number">от <span>4000</span> руб./сутки</p>
       </a>
 
@@ -101,8 +106,8 @@
 
   <!-- Footer -->
   @@include('_include/page-footer.html')
+
   <script src="js/script.min.js"></script>
-</div>
 
 </body>
 
