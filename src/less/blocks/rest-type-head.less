@@ -25,8 +25,13 @@
       line-height: 42px;
       display: inline;
       max-width: 650px;
-      background-color: @inner-bgr;
       margin-bottom: 20px;
+
+      span {
+        background-color: @inner-bgr;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     @media (min-width: @screen-l) {
@@ -38,10 +43,16 @@
     @media (min-width: @screen-m) {
       font-size: 18px;
       line-height: 24px;
-      background-color: @inner-bgr;
       display: inline;
       text-align: left;
-      max-width: 510px;
+      max-width: 600px;
+
+      span {
+        display: inline-block;
+        background-color: @inner-bgr;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
 

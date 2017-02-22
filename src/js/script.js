@@ -156,6 +156,10 @@ $(document).ready(function() {
 
   // Форма бронирования
 
+  $( function() {
+    $( "#startDate" ).datepicker();
+  });
+
   $('.placement-type__label').on('click', function(event) {
     event.preventDefault();
     if (!$(this).hasClass('placement-type__label--active')) {
