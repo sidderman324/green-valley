@@ -103,6 +103,9 @@ $(document).ready(function() {
     $('.review__arrow-btn').css({
       "display": "none",
     });
+    $('#reviewAll').css({
+      "display": "none",
+    });
     $('.review-card').fadeIn(400).css('display', 'flex');
   });
 
@@ -134,21 +137,30 @@ $(document).ready(function() {
   $('#loupe').on('click', function(e) {
     e.preventDefault();
     $('.modal__img').attr('src', $('#singleRoomGallery .active .room-description__photo-item').attr('src'));
-    $('#modal').fadeIn(800).css({
+    $('#modal').fadeIn(400).css({
+      "display": "flex",
+    })
+    $('.modal').fadeIn(400).css({
       "display": "flex",
     })
   });
 
   $('#loupeClose').on('click', function(e) {
     e.preventDefault();
-    $('#modal').fadeOut(800).css({
+    $('#modal').fadeOut(400).css({
+      "display": "none",
+    })
+    $('.modal').fadeIn(400).css({
       "display": "none",
     })
   });
 
-  $('#modal').on('click', function(e) {
+  $('.modal').on('click', function(e) {
     e.preventDefault();
-    $('#modal').fadeOut(800).css({
+    $('#modal').fadeOut(400).css({
+      "display": "none",
+    })
+    $('.modal').fadeIn(400).css({
       "display": "none",
     })
   });
