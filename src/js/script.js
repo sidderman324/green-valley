@@ -156,25 +156,31 @@ $(document).ready(function() {
 
   // Форма бронирования
 
-  $( function() {
-    $( "#startDate" ).datepicker();
-  });
 
   $('.placement-type__label').on('click', function(event) {
     event.preventDefault();
     if (!$(this).hasClass('placement-type__label--active')) {
       $('.placement-type__label').toggleClass('placement-type__label--active');
       $('.cottage-type__list').toggleClass('cottage-type__list--hidden');
-      $('.cottage-advantages').toggleClass('cottage-advantages--hidden');
+      $('.cottage-type__title').toggleClass('cottage-type__title--active');
+      $('.cottage-advantages').toggleClass('cottage-advantages--active');
+
+    }
+    if ($('.cottage-advantages__item').not('cottage-advantages__item--active')) {
+      $('.cottage-advantages').addClass('cottage-advantages--active');
     }
   });
 
-  $('.cottage-type__text').on('click', function(event) {
-    event.preventDefault();
-    $('.cottage-type__text').removeClass('cottage-type__text--active');
-    !$(this).addClass('cottage-type__text--active');
+
+  $(function() {
+    $('.cottage-type__text').on('click', function(event) {
+      event.preventDefault();
+      $('.cottage-type__text').removeClass('cottage-type__text--active');
+      $('.cottage-advantages__item').removeClass('cottage-advantages__item--active');
+      !$(this).addClass('cottage-type__text--active');
+      var link = $(this).parent().attr('href');
+      $(link).addClass('cottage-advantages__item--active');
+    });
   });
-
-
 
 });

@@ -2,13 +2,14 @@
 
 
 .cottage-advantages {
+  display: none;
 
-  &--hidden {
-    display: none;
+  &--active {
+    display: block;
   }
 
   &__item {
-    display: flex;
+    display: none;
     .form-wrapper();
     background-color: #fff;
     margin-top: 20px;
@@ -24,8 +25,8 @@
       flex-direction: row;
     }
 
-    &--hidden {
-      display: none;
+    &--active {
+      display: flex;
     }
 
   }

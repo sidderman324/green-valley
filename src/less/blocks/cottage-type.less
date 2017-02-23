@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
     @media (min-width: @screen-m) {
       flex-direction: row;
@@ -35,14 +36,15 @@
 
   &__item {
       .form-wrapper();
-      height: 45px;
+      // height: 45px;
       display: block;
       width: 100%;
       text-align: center;
       text-decoration: none;
+      box-sizing: border-box;
 
       @media (min-width: @screen-m) {
-        height: 85px;
+        // height: 85px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -55,12 +57,27 @@
       }
   }
 
+  &__title {
+    display: none;
+
+    &--active {
+      display: inline-block;
+    }
+  }
+
   &__text {
     font-weight: 500;
+    box-sizing: border-box;
+    padding: 10px;
+
+    @media (min-width: @screen-m) {
+      padding: 30px;
+    }
 
     &--active {
       color: @text-color;
       position: relative;
+      display: inline-block;
 
       &:before {
         content: '';
@@ -71,8 +88,20 @@
         left: -50px;
 
         @media(min-width: @screen-m) {
-          left: 20px;
-          top: 28px;
+          left: 50px;
+          top: 55px;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        .sprite(@triangle);
+        position: absolute;
+
+        @media(min-width: @screen-m) {
+          left: 49px;
+          bottom: -45px;
         }
       }
     }
