@@ -69,6 +69,7 @@
     font-weight: 500;
     box-sizing: border-box;
     padding: 10px;
+    display: inline-block;
 
     @media (min-width: @screen-m) {
       padding: 30px;
@@ -77,14 +78,13 @@
     &--active {
       color: @text-color;
       position: relative;
-      display: inline-block;
 
       &:before {
         content: '';
         display: inline-block;
         .sprite(@check);
         position: absolute;
-        top: 2px;
+        top: 14px;
         left: -50px;
 
         @media(min-width: @screen-m) {
@@ -98,6 +98,10 @@
         display: inline-block;
         .sprite(@triangle);
         position: absolute;
+
+        @media (max-width: @screen-m) {
+          display: none;
+        }
 
         @media(min-width: @screen-m) {
           left: 49px;

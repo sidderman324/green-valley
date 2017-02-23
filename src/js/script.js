@@ -164,7 +164,6 @@ $(document).ready(function() {
       $('.cottage-type__list').toggleClass('cottage-type__list--hidden');
       $('.cottage-type__title').toggleClass('cottage-type__title--active');
       $('.cottage-advantages').toggleClass('cottage-advantages--active');
-
     }
     if ($('.cottage-advantages__item').not('cottage-advantages__item--active')) {
       $('.cottage-advantages').addClass('cottage-advantages--active');
@@ -180,7 +179,13 @@ $(document).ready(function() {
       !$(this).addClass('cottage-type__text--active');
       var link = $(this).parent().attr('href');
       $(link).addClass('cottage-advantages__item--active');
+      var cost = $('.cottage-type__text--active').next().attr("value");
+      console.log(cost);
     });
+
+
   });
+
+
 
 });
