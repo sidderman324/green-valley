@@ -1,7 +1,13 @@
 $(document).ready(function() {
 
   $('#toggler').on('click', function() {
-    $('#nav').toggle(400);
+    $('#nav').toggleClass('main-nav--hidden');
+    $('.outliner').toggleClass('outliner--active');
+  });
+
+  $('.outliner').on('click', function() {
+    $('#nav').toggleClass('main-nav--hidden');
+    $('.outliner').toggleClass('outliner--active');
   });
 
 
