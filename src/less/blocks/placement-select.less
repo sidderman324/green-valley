@@ -23,13 +23,14 @@
     @media (min-width: @screen-m) {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       padding-left: 8%;
       padding-right: 8%;
     }
 
     @media (min-width: @screen-l) {
       .inner-screen-l ();
+      flex-wrap: nowrap;
     }
   }
 }
