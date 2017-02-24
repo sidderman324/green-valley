@@ -1,0 +1,35 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/placement-select-main.less';
+
+
+.placement-select-main {
+  background-color: @green-bgr;
+  padding-top: 45px;
+  padding-bottom: 42px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+
+    h2 {
+      margin-bottom: 35px;
+      flex-basis: 100%;
+    }
+
+    @media (min-width: @screen-m) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 1.5%;
+      padding-right: 1.5%;
+    }
+
+    @media (min-width: @screen-l) {
+      .inner-screen-l ();
+      flex-wrap: wrap;
+    }
+  }
+}

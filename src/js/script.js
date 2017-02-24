@@ -179,14 +179,14 @@ $(document).ready(function() {
     event.preventDefault();
     if (!$(this).hasClass('placement-type__label--active')) {
       $('.placement-type__label').toggleClass('placement-type__label--active');
-      $('.cottage-type__list').toggleClass('cottage-type__list--hidden');
+      $('.cottage-type__list').toggleClass('cottage-type__list--active');
+      $('.cottage-type__list a:first-child > span').addClass('cottage-type__text--active');
       $('.cottage-type__title').toggleClass('cottage-type__title--active');
       $('.cottage-advantages').toggleClass('cottage-advantages--active');
-    }
-    if ($('.cottage-advantages__item').not('cottage-advantages__item--active')) {
-      $('.cottage-advantages').addClass('cottage-advantages--active');
+      $('.cottage-advantages--active div:first-child').addClass('cottage-advantages__item--active');
     }
   });
+
 
 
   $(function() {
@@ -197,11 +197,10 @@ $(document).ready(function() {
       !$(this).addClass('cottage-type__text--active');
       var link = $(this).parent().attr('href');
       $(link).addClass('cottage-advantages__item--active');
+
       var cost = $('.cottage-type__text--active').next().attr("value");
       console.log(cost);
     });
-
-
   });
 
 

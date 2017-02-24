@@ -16,14 +16,17 @@
   text-decoration: none;
   padding-bottom: 35px;
   box-sizing: border-box;
-  // flex-basis: 46%;
   margin-bottom: 0;
   margin-left: 10px;
   margin-right: 10px;
   width: 280px;
 
+  &--main {
+    // flex-basis: 46%;
+  }
+
   @media(min-width: @screen-m) {
-    width: 355px;
+    width: 350px;
   }
 
   @media (min-width: @screen-l) {
@@ -40,8 +43,16 @@
   }
 
   &__img {
-    height: 199px;
+    height: 160px;
     width: 100%;
+
+    @media (min-width: @screen-m) {
+      height: 200px;
+    }
+
+    @media (min-width: @screen-l) {
+      height: 200px;
+    }
   }
 
   &__subtitle {
