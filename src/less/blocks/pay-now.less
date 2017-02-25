@@ -8,6 +8,7 @@
   align-items: flex-start;
   padding: 19px;
   box-sizing: border-box;
+  position: relative;
 
   @media(min-width: @screen-m) {
     display: flex;
@@ -22,6 +23,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-right: 20px;
+    position: relative;
 
     @media(min-width: @screen-m) {
       &:nth-child(2) {
@@ -51,5 +53,39 @@
 
   &__subtitle {
     text-align: left;
+    position: relative;
+    width: 100%;
+  }
+
+  &__cvv-question {
+    display: none;
+    cursor: pointer;
+    .sprite(@question);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media (min-width: @screen-l) {
+      display: inline-block;
+    }
+  }
+
+
+  &__cvv-info {
+    display: none;
+    background-color: rgba(50,50,50,0.8);
+    border-radius: 5px;
+    font-size: 10px;
+    color: #fff;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+    position: absolute;
+    right: 14px;
+    top: -57px;
+
+    &--active {
+      display: inline-block;
+    }
   }
 }

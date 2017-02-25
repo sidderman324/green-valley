@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-   $('input,textarea').focus(function(){
-     $(this).data('placeholder',$(this).attr('placeholder'))
-     $(this).attr('placeholder','');
-   });
-   $('input,textarea').blur(function(){
-     $(this).attr('placeholder',$(this).data('placeholder'));
-   });
+  $('input,textarea').focus(function() {
+    $(this).data('placeholder', $(this).attr('placeholder'))
+    $(this).attr('placeholder', '');
+  });
+  $('input,textarea').blur(function() {
+    $(this).attr('placeholder', $(this).data('placeholder'));
+  });
 
 
   $('#toggler').on('click', function() {
@@ -199,12 +199,12 @@ $(document).ready(function() {
     });
   });
 
-  $(function(){
-    $('.payment-type__on-arrival').on('click', function(){
+  $(function() {
+    $('.payment-type__on-arrival').on('click', function() {
       $('.payment-type__on-arrival > .payment-type__subtitle').addClass('payment-type__subtitle--active');
       $('.payment-type__bank-card > .payment-type__subtitle').removeClass('payment-type__subtitle--active');
     })
-    $('.payment-type__bank-card').on('click', function(){
+    $('.payment-type__bank-card').on('click', function() {
       $('.payment-type__bank-card > .payment-type__subtitle').addClass('payment-type__subtitle--active');
       $('.payment-type__on-arrival > .payment-type__subtitle').removeClass('payment-type__subtitle--active');
     })
@@ -226,7 +226,7 @@ $(document).ready(function() {
         top: pos.top - 3,
         left: pos.left + ele.width() + 15
       });
-      var patt = /^[А-Яа-яЁё]+$/i ;
+      var patt = /^[А-Яа-яЁё]+$/i;
       if (!patt.test(ele.val())) {
         jVal.errors = true;
         ele.removeClass('input-validate__success').addClass('input-validate__error');
@@ -244,7 +244,7 @@ $(document).ready(function() {
         top: pos.top - 3,
         left: pos.left + ele.width() + 15
       });
-      var patt = /^[А-Яа-яЁё]+$/i ;
+      var patt = /^[А-Яа-яЁё]+$/i;
       if (!patt.test(ele.val())) {
         jVal.errors = true;
         ele.removeClass('input-validate__success').addClass('input-validate__error');
@@ -262,7 +262,7 @@ $(document).ready(function() {
         top: pos.top - 3,
         left: pos.left + ele.width() + 15
       });
-      var patt = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/i ;
+      var patt = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/i;
       if (!patt.test(ele.val())) {
         jVal.errors = true;
         ele.removeClass('input-validate__success').addClass('input-validate__error');
@@ -371,4 +371,17 @@ $(document).ready(function() {
   $('#cardOwner').change(jVal.cardOwner);
   $('#cardCVV').change(jVal.cardCVV);
   $('#cardValidPeriod').change(jVal.cardValidPeriod);
+
+  $('.pay-now__cvv-question').hover(
+    function() {
+    $('.pay-now__cvv-info').addClass('pay-now__cvv-info--active');
+    },
+    function() {
+      $('.pay-now__cvv-info').removeClass('pay-now__cvv-info--active');
+    });
+
+
+
+
+
 });
