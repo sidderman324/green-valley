@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+   $('input,textarea').focus(function(){
+     $(this).data('placeholder',$(this).attr('placeholder'))
+     $(this).attr('placeholder','');
+   });
+   $('input,textarea').blur(function(){
+     $(this).attr('placeholder',$(this).data('placeholder'));
+   });
+
+
   $('#toggler').on('click', function() {
     $('#nav').toggleClass('main-nav--hidden');
     $('.outliner').toggleClass('outliner--active');
@@ -57,18 +66,12 @@ $(document).ready(function() {
     }
   });
 
-  // $(document).on('click', '.owl-item', function(){
-  //       var carousel = $('.owl-carousel');
-  //       n = $(this).index();
-  //       console.log(n);
-  //       carousel.toggle('to.owl.carousel', n);
-  // });
 
-  $('#gallery-preview img').on('click', function(event) {
-    var imgSrc = $(this).attr('src');
-    $(this).addClass('center');
-    $('#gallery-main-img').attr('src', imgSrc);
-  });
+  // $('#gallery-preview img').on('click', function(event) {
+  //   var imgSrc = $(this).attr('src');
+  //   $(this).addClass('center');
+  //   $('#gallery-main-img').attr('src', imgSrc);
+  // });
 
   $('#reviewCard').owlCarousel({
     items: 2,
@@ -84,11 +87,6 @@ $(document).ready(function() {
     if (windowWidth > 1199) {
       $('#reviewCard').trigger('add.owl.carousel');
     }
-  });
-
-  $('#gallery-preview').on('click', '.owl-item', function() {
-    var carousel = $('#gallery-preview').data('owl.carousel');
-    carousel.to(carousel.relative($(this).index()));
   });
 
 
@@ -184,10 +182,11 @@ $(document).ready(function() {
       $('.cottage-type__title').toggleClass('cottage-type__title--active');
       $('.cottage-advantages').toggleClass('cottage-advantages--active');
       $('.cottage-advantages--active div:first-child').addClass('cottage-advantages__item--active');
+
+      var cost = $('.cottage-type__text--active').next().attr("value");
+      console.log(cost);
     }
   });
-
-
 
   $(function() {
     $('.cottage-type__text').on('click', function(event) {
@@ -197,11 +196,22 @@ $(document).ready(function() {
       !$(this).addClass('cottage-type__text--active');
       var link = $(this).parent().attr('href');
       $(link).addClass('cottage-advantages__item--active');
-
-      var cost = $('.cottage-type__text--active').next().attr("value");
-      console.log(cost);
     });
   });
+
+  $(function(){
+    $('.payment-type__on-arrival').on('click', function(){
+      $('.payment-type__on-arrival > .payment-type__subtitle').addClass('payment-type__subtitle--active');
+      $('.payment-type__bank-card > .payment-type__subtitle').removeClass('payment-type__subtitle--active');
+    })
+    $('.payment-type__bank-card').on('click', function(){
+      $('.payment-type__bank-card > .payment-type__subtitle').addClass('payment-type__subtitle--active');
+      $('.payment-type__on-arrival > .payment-type__subtitle').removeClass('payment-type__subtitle--active');
+    })
+
+  });
+
+
 
 
 
