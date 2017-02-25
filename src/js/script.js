@@ -214,5 +214,164 @@ $(document).ready(function() {
 
 
 
+  var jVal = {
+
+    // Валидация имени
+    'Name': function() {
+      $('body').append('<div id="nameInfo" class="info"></div>');
+      var nameInfo = $('#nameInfo');
+      var ele = $('#firstName');
+      var pos = ele.offset();
+      nameInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^[А-Яа-яЁё]+$/i ;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Валидация фамилии
+    'surName': function() {
+      $('body').append('<div id="nameInfo" class="info"></div>');
+      var nameInfo = $('#nameInfo');
+      var ele = $('#surName');
+      var pos = ele.offset();
+      nameInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^[А-Яа-яЁё]+$/i ;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Валидация телефона
+    'phone': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#phone');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/i ;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Валидация почтового адреса
+    'email': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#eMail');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^.+@.+[.].{2,}$/i;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Номер карты
+    'cardNumber': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#cardNumber');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^\d{16}$/i;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Держатель карты
+    'cardOwner': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#cardOwner');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^[a-zA-Z\s]+$/i;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // CVV код
+    'cardCVV': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#cardCVV');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /^\d{3,4}$/i;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+    // Срок действия карты
+    'cardValidPeriod': function() {
+      $('body').append('<div id="emailInfo" class="info"></div>');
+      var emailInfo = $('#emailInfo');
+      var ele = $('#cardValidPeriod');
+      var pos = ele.offset();
+      emailInfo.css({
+        top: pos.top - 3,
+        left: pos.left + ele.width() + 15
+      });
+      var patt = /\d{2}+(\/\d{2})?/i;
+      if (!patt.test(ele.val())) {
+        jVal.errors = true;
+        ele.removeClass('input-validate__success').addClass('input-validate__error');
+      } else {
+        ele.removeClass('input-validate__error').addClass('input-validate__success');
+      }
+    },
+
+  };
+  // Персональная информация
+  $('#firstName').change(jVal.Name);
+  $('#surName').change(jVal.surName);
+  $('#phone').change(jVal.phone);
+  $('#eMail').change(jVal.email);
+  // Форма оплаты
+  $('#cardNumber').change(jVal.cardNumber);
+  $('#cardOwner').change(jVal.cardOwner);
+  $('#cardCVV').change(jVal.cardCVV);
+  $('#cardValidPeriod').change(jVal.cardValidPeriod);
+
 
 });
