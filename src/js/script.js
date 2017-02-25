@@ -342,7 +342,7 @@ $(document).ready(function() {
         top: pos.top - 3,
         left: pos.left + ele.width() + 15
       });
-      var patt = /\d{2}+(\/\d{2})?/i;
+      var patt = /(\d{2})+(\/\d{2})?/i;
       if (!patt.test(ele.val())) {
         jVal.errors = true;
         ele.removeClass('input-validate__success').addClass('input-validate__error');
