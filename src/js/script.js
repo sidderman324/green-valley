@@ -51,27 +51,73 @@ $(document).ready(function() {
 
 
 
+  // $('#gallery-preview').owlCarousel({
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //       center: true,
+  //       loop: true,
+  //     },
+  //     768: {
+  //       center: true,
+  //       loop: true,
+  //       items: 6,
+  //     }
+  //   }
+  // });
+
   $('#gallery-preview').owlCarousel({
-    responsive: {
-      320: {
-        items: 1,
-        center: true,
-        loop: true,
+    loop: true,
+    center: true,
+    dots: false,
+    responsive:{
+      0:{
+        items: 1
       },
-      768: {
-        center: true,
-        loop: true,
-        items: 6,
+      768:{
+        items: 6
       }
     }
   });
 
 
-  // $('#gallery-preview img').on('click', function(event) {
-  //   var imgSrc = $(this).attr('src');
-  //   $(this).addClass('center');
-  //   $('#gallery-main-img').attr('src', imgSrc);
+  $('#gallery-preview img').on('click', function(event) {
+    var imgSrc = $(this).attr('src');
+    $(this).addClass('center');
+    $('#gallery-main-img').attr('src', imgSrc);
+  });
+
+
+  galleryResize();
+  $(window).resize(galleryResize);
+
+  function galleryResize() {
+    if($(window).width() < 768) {
+      $('.gallery__main-wrapper').hide();
+      $('#gallery-preview').height(215);
+    }
+    else {
+      $('.gallery__main-wrapper').show();
+      var widthMain = parseInt($('.gallery__main-wrapper').css('width')),
+      heightMain = widthMain / 2.36;
+      $('.gallery__main-wrapper').css('height', heightMain);
+      var widthSlider = parseInt($('#gallery-preview').css('width')),
+      heightSlider = widthSlider / 11.2;
+      $('#gallery-preview').css('height', heightSlider);
+    }
+  };
+
+  // $(document).on('click', '.owl-item', function(){
+  //       n = $(this).index();
+  //       console.log(n)
+  //       $('#gallery-preview').trigger('owl.goTo', n);
   // });
+
+  $('#gallery-preview').on('click', '.owl-item', function() {
+    var carousel = $('#gallery-preview').data('owl.carousel');
+    carousel.to(carousel.relative($(this).index()));
+  });
+
 
 
   function reviewGallery() {
@@ -190,9 +236,6 @@ $(document).ready(function() {
       $('.cottage-type__title').toggleClass('cottage-type__title--active');
       $('.cottage-advantages').toggleClass('cottage-advantages--active');
       $('.cottage-advantages--active div:first-child').addClass('cottage-advantages__item--active');
-
-      var cost = $('.cottage-type__text--active').next().attr("value");
-      console.log(cost);
     }
   });
 
@@ -204,6 +247,8 @@ $(document).ready(function() {
       !$(this).addClass('cottage-type__text--active');
       var link = $(this).parent().attr('href');
       $(link).addClass('cottage-advantages__item--active');
+      var cost = $('.cottage-type__text--active').next().attr("value");
+      console.log(cost);
     });
   });
 
@@ -387,9 +432,5 @@ $(document).ready(function() {
     function() {
       $('.pay-now__cvv-info').removeClass('pay-now__cvv-info--active');
     });
-
-
-
-
 
 });
