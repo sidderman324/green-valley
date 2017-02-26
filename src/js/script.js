@@ -73,21 +73,29 @@ $(document).ready(function() {
   //   $('#gallery-main-img').attr('src', imgSrc);
   // });
 
-  $('#reviewCard').owlCarousel({
-    items: 2,
-    loop: true,
-    startPosition: 2,
-  });
 
-  $(function() {
+  function reviewGallery() {
     var windowWidth = $(window).width();
-    if (windowWidth < 1199) {
-      $('#reviewCard').trigger('destroy.owl.carousel');
-    }
     if (windowWidth > 1199) {
-      $('#reviewCard').trigger('add.owl.carousel');
+      $('#reviewCard').owlCarousel({
+        items: 2,
+        loop: true,
+      });
+      $('.review-card').removeClass('review-card--hidden');
     }
-  });
+    else {
+      $('#reviewCard').trigger('destroy.owl.carousel');
+      $('.review-card:nth-child(3)').addClass('review-card--hidden');
+      $('.review-card:nth-child(4)').addClass('review-card--hidden');
+      $('.review-card:nth-child(5)').addClass('review-card--hidden');
+      $('.review-card:nth-child(6)').addClass('review-card--hidden');
+
+    }
+    console.log(windowWidth);
+  }
+
+  $(document).ready(reviewGallery);
+  $(window).resize(reviewGallery);
 
 
   $('#reviewAll').on('click', function(event) {
