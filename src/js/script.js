@@ -80,42 +80,10 @@ $(document).ready(function() {
     }
   });
 
-
   $('#gallery-preview img').on('click', function(event) {
     var imgSrc = $(this).attr('src');
     $(this).addClass('center');
     $('#gallery-main-img').attr('src', imgSrc);
-  });
-
-
-  galleryResize();
-  $(window).resize(galleryResize);
-
-  function galleryResize() {
-    if($(window).width() < 768) {
-      $('.gallery__main-wrapper').hide();
-      $('#gallery-preview').height(215);
-    }
-    else {
-      $('.gallery__main-wrapper').show();
-      var widthMain = parseInt($('.gallery__main-wrapper').css('width')),
-      heightMain = widthMain / 2.36;
-      $('.gallery__main-wrapper').css('height', heightMain);
-      var widthSlider = parseInt($('#gallery-preview').css('width')),
-      heightSlider = widthSlider / 11.2;
-      $('#gallery-preview').css('height', heightSlider);
-    }
-  };
-
-  // $(document).on('click', '.owl-item', function(){
-  //       n = $(this).index();
-  //       console.log(n)
-  //       $('#gallery-preview').trigger('owl.goTo', n);
-  // });
-
-  $('#gallery-preview').on('click', '.owl-item', function() {
-    var carousel = $('#gallery-preview').data('owl.carousel');
-    carousel.to(carousel.relative($(this).index()));
   });
 
 
