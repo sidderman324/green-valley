@@ -89,21 +89,22 @@ $(document).ready(function() {
 
 
   function reviewGallery() {
+
     var windowWidth = $(window).width();
-    if (windowWidth > 1199) {
+    if (windowWidth < 1199) {
+      $('.review-card:nth-child(3)').addClass('review-card--hidden');
+      $('.review-card:nth-child(4)').addClass('review-card--hidden');
+      $('.review-card:nth-child(5)').addClass('review-card--hidden');
+      $('.review-card:nth-child(6)').addClass('review-card--hidden');
+      $('#reviewCard').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+      $('#reviewCard').find('.owl-stage-outer').children().unwrap();
+    }
+    else {
       $('#reviewCard').owlCarousel({
         items: 2,
         loop: true,
       });
       $('.review-card').removeClass('review-card--hidden');
-    }
-    else {
-      $('#reviewCard').trigger('destroy.owl.carousel');
-      $('.review-card:nth-child(3)').addClass('review-card--hidden');
-      $('.review-card:nth-child(4)').addClass('review-card--hidden');
-      $('.review-card:nth-child(5)').addClass('review-card--hidden');
-      $('.review-card:nth-child(6)').addClass('review-card--hidden');
-
     }
     console.log(windowWidth);
   }
