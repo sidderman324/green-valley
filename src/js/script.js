@@ -50,31 +50,15 @@ $(document).ready(function() {
   });
 
 
-
-  // $('#gallery-preview').owlCarousel({
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //       center: true,
-  //       loop: true,
-  //     },
-  //     768: {
-  //       center: true,
-  //       loop: true,
-  //       items: 6,
-  //     }
-  //   }
-  // });
-
   $('#gallery-preview').owlCarousel({
     loop: true,
     center: true,
     dots: false,
-    responsive:{
-      0:{
+    responsive: {
+      0: {
         items: 1
       },
-      768:{
+      768: {
         items: 6
       }
     }
@@ -98,8 +82,7 @@ $(document).ready(function() {
       $('.review-card:nth-child(6)').addClass('review-card--hidden');
       $('#reviewCard').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
       $('#reviewCard').find('.owl-stage-outer').children().unwrap();
-    }
-    else {
+    } else {
       $('#reviewCard').owlCarousel({
         items: 2,
         loop: true,
@@ -216,8 +199,6 @@ $(document).ready(function() {
       !$(this).addClass('cottage-type__text--active');
       var link = $(this).parent().attr('href');
       $(link).addClass('cottage-advantages__item--active');
-      var cost = $('.cottage-type__text--active').next().attr("value");
-      console.log(cost);
     });
   });
 
@@ -230,7 +211,6 @@ $(document).ready(function() {
       $('.payment-type__bank-card > .payment-type__subtitle').addClass('payment-type__subtitle--active');
       $('.payment-type__on-arrival > .payment-type__subtitle').removeClass('payment-type__subtitle--active');
     })
-
   });
 
 
@@ -396,10 +376,79 @@ $(document).ready(function() {
 
   $('.pay-now__cvv-question').hover(
     function() {
-    $('.pay-now__cvv-info').addClass('pay-now__cvv-info--active');
+      $('.pay-now__cvv-info').addClass('pay-now__cvv-info--active');
     },
     function() {
       $('.pay-now__cvv-info').removeClass('pay-now__cvv-info--active');
     });
+
+
+  $(function() {
+
+      var pickerStart = new Pikaday({
+      field: document.getElementById('start'),
+      onSelect: function() {
+        var startDate = pickerStart.getDate();
+        var calcStart = moment(startDate).toDate();
+        var startFormatDate = moment(startDate).toArray();
+        $('#startD').text( startFormatDate[2] );
+        $('#startM').text( startFormatDate[1] + 1 );
+        $('#startY').text( startFormatDate[0] );
+        }
+      });
+
+      var pickerEnd = new Pikaday({
+      field: document.getElementById('end'),
+      onSelect: function() {
+        var endDate = pickerEnd.getDate();
+        var calcEnd = moment(endDate).toDate();
+        var endFormatDate = moment(endDate).toArray();
+        $('#endD').text( endFormatDate[2] );
+        $('#endM').text( endFormatDate[1] + 1 );
+        $('#endY').text( endFormatDate[0] );
+        }
+      });
+  });
+
+  function totalCost() {
+    var placePrice = $('.cottage-type__list--active .cottage-type__text--active').next().attr("value");
+  }
+
+  $(document).ready(totalCost);
+  $('.placement-type__item').click(totalCost);
+  $('.cottage-type__list').click(totalCost);
+  $('.rest-period__item').click(totalCost);
+
+
+
+
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 60.192, lng: 29.638},
+      scrollwheel: false,
+      disableDefaultUI: true,
+      zoom: 14
+    });
+
+    var marker = new google.maps.Marker({
+      position: {lat: 60.192, lng: 29.638},
+      map: map,
+      icon: '../img/marker.png'
+    });
+
+  	var center;
+  	function calculateCenter() {
+  	  center = map.getCenter();
+  	}
+  	google.maps.event.addDomListener(map, 'idle', function() {
+  	  calculateCenter();
+  	});
+  	google.maps.event.addDomListener(window, 'resize', function() {
+  	  map.setCenter(center);
+  	});
+  }
+
+
 
 });
