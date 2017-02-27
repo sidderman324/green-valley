@@ -175,6 +175,13 @@ $(document).ready(function() {
     })
   });
 
+  $('.reach-us__map-mask').on('click', function(e) {
+    e.preventDefault();
+    $(this).css({
+      "display": "none",
+    })
+  });
+
 
   // Форма бронирования
 
@@ -383,6 +390,7 @@ $(document).ready(function() {
     });
 
 
+
   $(function() {
 
       var pickerStart = new Pikaday({
@@ -390,10 +398,9 @@ $(document).ready(function() {
       onSelect: function() {
         var startDate = pickerStart.getDate();
         var calcStart = moment(startDate).toDate();
-        var startFormatDate = moment(startDate).toArray();
-        $('#startD').text( startFormatDate[2] );
-        $('#startM').text( startFormatDate[1] + 1 );
-        $('#startY').text( startFormatDate[0] );
+        $('#startD').text( calcStart.getDate() );
+        $('#startM').text( calcStart.getMonth() + 1 );
+        $('#startY').text( calcStart.getFullYear() );
         }
       });
 
@@ -402,52 +409,25 @@ $(document).ready(function() {
       onSelect: function() {
         var endDate = pickerEnd.getDate();
         var calcEnd = moment(endDate).toDate();
-        var endFormatDate = moment(endDate).toArray();
-        $('#endD').text( endFormatDate[2] );
-        $('#endM').text( endFormatDate[1] + 1 );
-        $('#endY').text( endFormatDate[0] );
+        $('#endD').text( calcEnd.getDate() );
+        $('#endM').text( calcEnd.getMonth() + 1 );
+        $('#endY').text( calcEnd.getFullYear() );
         }
       });
+
   });
+
+
 
   function totalCost() {
     var placePrice = $('.cottage-type__list--active .cottage-type__text--active').next().attr("value");
+    console.log(placePrice);
   }
 
   $(document).ready(totalCost);
   $('.placement-type__item').click(totalCost);
   $('.cottage-type__list').click(totalCost);
   $('.rest-period__item').click(totalCost);
-
-
-
-
-
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 60.192, lng: 29.638},
-      scrollwheel: false,
-      disableDefaultUI: true,
-      zoom: 14
-    });
-
-    var marker = new google.maps.Marker({
-      position: {lat: 60.192, lng: 29.638},
-      map: map,
-      icon: '../img/marker.png'
-    });
-
-  	var center;
-  	function calculateCenter() {
-  	  center = map.getCenter();
-  	}
-  	google.maps.event.addDomListener(map, 'idle', function() {
-  	  calculateCenter();
-  	});
-  	google.maps.event.addDomListener(window, 'resize', function() {
-  	  map.setCenter(center);
-  	});
-  }
 
 
 
