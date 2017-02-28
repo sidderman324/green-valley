@@ -426,7 +426,18 @@ $(document).ready(function() {
     var placePrice = $('.cottage-type__list--active .cottage-type__text--active').next().attr("value");
     var start = $('#start').attr('value');
     var end = $('#end').attr('value');
+    var today = new Date().getTime();
     var days = (end - start) / (1000 * 60 * 60 * 24);
+    if (start < today) {
+      $('#errorCause').text( 'выберите корректную дату' );
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').attr('href', '#restPeriod');
+    }
+    if (end < today) {
+      $('#errorCause').text( 'выберите корректную дату' );
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').attr('href', '#restPeriod');
+    }
     if (days < 1) {
       $('#errorCause').text( 'выберите корректную дату' );
       $('.total-price__text').fadeIn(400);
@@ -454,9 +465,7 @@ $(document).ready(function() {
   $('#errorCause').click(function() {
     var elementClick = $(this).attr("href")
     var destination = $(elementClick).offset().top;
-    jQuery("html:not(:animated),body:not(:animated)").animate({
-        scrollTop: destination
-      }, 800);
+    jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop : destination }, 800);
     return false;
   });
 
