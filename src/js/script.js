@@ -70,6 +70,10 @@ $(document).ready(function() {
     $('#gallery-main-img').attr('src', imgSrc);
   });
 
+  $('#gallery-main-img').on( 'click', function(event) {
+      $('#gallery-preview').trigger('to.owl.carousel', [2, 200]);
+  });
+
 
 
   function reviewGallery() {
@@ -387,7 +391,7 @@ $(document).ready(function() {
     },
     function() {
       $('.pay-now__cvv-info').removeClass('pay-now__cvv-info--active');
-    });
+  });
 
 
 
@@ -445,8 +449,16 @@ $(document).ready(function() {
     } else {
       $('#totalCost').text ( totalCost + ' руб' );
     }
-
   }
+
+  $('#errorCause').click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+      }, 800);
+    return false;
+  });
 
   $(document).ready(totalCost);
   $(document).click(totalCost);
