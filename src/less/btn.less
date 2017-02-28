@@ -15,6 +15,11 @@
   &--bg-orange {
     background-color: @text-orange;
     border: 2px solid @text-orange;
+
+    &:hover {
+      background-color: #e85715;
+      border: 2px solid #e85715;
+    }
   }
 
   &--detail {
@@ -29,6 +34,10 @@
     margin-left: auto;
     margin-right: auto;
     line-height: 20px;
+
+    &:hover {
+      border-bottom: 0;
+    }
   }
 
   &--icon-calendar {
@@ -52,5 +61,18 @@
     border: 0;
     width: 100%;
     max-width: 780px;
+
+    &:hover {
+      background-color: #079b84;
+    }
+  }
+
+  &--white {
+
+    &:hover {
+      background-color: #fff;
+      color: #19ba9c;
+    }
+
   }
 }

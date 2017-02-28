@@ -63,5 +63,21 @@
     &:hover {
       color: @text-orange;
     }
+
+    &--active {
+      color: @text-orange;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 2.5px;
+        background-color: @text-orange;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+      }
+    }
   }
 }

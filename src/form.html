@@ -13,7 +13,49 @@
 </head>
 
 <body>
-  @@include('_include/page-header.html')
+  <header class="page-header">
+      <div class="page-header__inner">
+
+          <a href="index.html" class="main-logo main-logo__header">
+            <img src="img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <a class="toggler-nav" id="toggler"><span></span></a>
+
+          <div class="main-nav  main-nav--hidden" id="nav">
+              <nav class="main-nav__nav">
+                  <ul class="main-nav__list">
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./rooms-list.html">Номера</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./single-room.html">Коттедж</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Ресторан</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Отдых</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Контакты</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+
+          <div class="main-contacts">
+            <div class="main-contacts__wrapper">
+              <a href="tel:+78127775588" class="main-contacts__phone">+7 812 777-55-88</a>
+              <address class="main-contacts__address main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+            </div>
+              <a href="form.html" id="booking-form" class="main-contacts__btn btn btn--bg-orange btn--icon-calendar"><span></span>Забронировать</a>
+          </div>
+
+      </div>
+      <div class="outliner"></div>
+
+  </header>
 
   <section class="form">
 
