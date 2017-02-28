@@ -25,9 +25,21 @@
 
   &__cost {
     margin: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: @text-color;
+    text-transform: lowercase;
+  }
+
+  &__warn {
+    display: inline-block;
+    .sprite(@warn);
+    margin-right: 5px;
   }
 
   &__text {
+    margin-right: -15px;
+    margin-left: -15px;
 
     a {
       .main-text ();

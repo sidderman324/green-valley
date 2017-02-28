@@ -392,43 +392,66 @@ $(document).ready(function() {
 
 
   $(function() {
-
       var pickerStart = new Pikaday({
       field: document.getElementById('start'),
       onSelect: function() {
         var startDate = pickerStart.getDate();
         var calcStart = moment(startDate).toDate();
+        var startMS = moment(calcStart).valueOf();
         $('#startD').text( calcStart.getDate() );
         $('#startM').text( calcStart.getMonth() + 1 );
         $('#startY').text( calcStart.getFullYear() );
+        $('#start').attr('value', startMS);
         }
       });
-
       var pickerEnd = new Pikaday({
       field: document.getElementById('end'),
       onSelect: function() {
         var endDate = pickerEnd.getDate();
         var calcEnd = moment(endDate).toDate();
+        var endMS = moment(calcEnd).valueOf();
         $('#endD').text( calcEnd.getDate() );
         $('#endM').text( calcEnd.getMonth() + 1 );
         $('#endY').text( calcEnd.getFullYear() );
+        $('#end').attr('value', endMS);
         }
       });
-
   });
-
-
 
   function totalCost() {
     var placePrice = $('.cottage-type__list--active .cottage-type__text--active').next().attr("value");
-    console.log(placePrice);
+    var start = $('#start').attr('value');
+    var end = $('#end').attr('value');
+    var days = (end - start) / (1000 * 60 * 60 * 24);
+    if (days < 1) {
+      $('#errorCause').text( 'выберите корректную дату' );
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').attr('href', '#restPeriod');
+    }
+    if ( $('.personal-info__item').hasClass('input-validate__error') ) {
+      $('#errorCause').text( 'введите корректные данные' );
+      $('#errorCause').attr('href', '#personalInfo');
+    }
+    if ( $('.personal-info__item').val()!='' ) {
+      $('#errorCause').text( 'введите корректные данные' );
+      $('#errorCause').attr('href', '#personalInfo');
+    }
+    if ( $('.personal-info__item').hasClass('input-validate__success') ) {
+      $('.total-price__text').fadeOut(400);
+    }
+    var totalCost = days * placePrice;
+    if (totalCost < 1) {
+      $('#totalCost').text ( '-' );
+    } else {
+      $('#totalCost').text ( totalCost + ' руб' );
+    }
+
   }
 
   $(document).ready(totalCost);
+  $(document).click(totalCost);
   $('.placement-type__item').click(totalCost);
   $('.cottage-type__list').click(totalCost);
   $('.rest-period__item').click(totalCost);
-
-
 
 });

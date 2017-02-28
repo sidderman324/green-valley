@@ -25,7 +25,7 @@
 
           <!-- Шаг 1 выбор даты -->
 
-          <div id="rest-period" class="form-item  form-item--bg-gray">
+          <div id="restPeriod" class="form-item  form-item--bg-gray">
             <div class="form-item__inner">
               <p class="step-number">Шаг 1</p>
               <h2 class="main-title main-title--mini">Дата отдыха</h2>
@@ -333,7 +333,7 @@
             <div class="form-item__inner">
               <p class="step-number">Шаг 4</p>
               <h2 class="main-title main-title--mini">Персональная информация</h2>
-              <div class="personal-info">
+              <div class="personal-info" id="personalInfo">
                   <input type="text" name="first-name" id="firstName" class="personal-info__item  main-text  main-text--form  main-text  main-text--form" placeholder="ИМЯ">
                   <input type="text" name="surname" id="surName" class="personal-info__item  main-text  main-text--form" placeholder="ФАМИЛИЯ">
                   <input type="text" name="phone" id="phone" class="personal-info__item  main-text  main-text--form" placeholder="НОМЕР ТЕЛЕФОНА">
@@ -354,8 +354,8 @@
 
                 <div class="total-price">
                     <p class="main-text  main-text--form">К оплате</p>
-                    <span class="total-price__cost  main-text  main-text--form">-</span>
-                    <p class="total-price__text  main-text  main-text--low">Пожалуйста, <a href="#rest-period">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+                    <span class="total-price__cost  main-text  main-text--form" id="totalCost"></span>
+                    <p class="total-price__text  main-text  main-text--low"><span class="total-price__warn"></span>Пожалуйста, <a href="#" id="errorCause"></a>, чтобы увидеть сумму к оплате</p>
                 </div>
 
                 <div class="payment-type__switcher">
