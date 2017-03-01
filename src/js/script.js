@@ -470,7 +470,7 @@ $(document).ready(function() {
       $('#errorCause').attr('href', '#personalInfo');
     } else if ( $('.personal-info__item').hasClass('input-validate__success') ) {
       $('.total-price__text').fadeOut(400);
-    } else if (datevalid ==0 ) {
+    } else if (dateValid ==0 ) {
       $('#errorCause').text( 'выберите корректную дату' );
       $('.total-price__text').fadeIn(400);
       $('#errorCause').attr('href', '#restPeriod');
