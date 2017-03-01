@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Бронирование номера</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+      <div class="page-header__inner">
+
+          <a href="index.html" class="main-logo main-logo__header">
+            <img src="img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <a class="toggler-nav" id="toggler"><span></span></a>
+
+          <div class="main-nav  main-nav--hidden" id="nav">
+              <nav class="main-nav__nav">
+                  <ul class="main-nav__list">
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./rooms-list.html">Номера</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./single-room.html">Коттедж</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Ресторан</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Отдых</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Контакты</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+
+          <div class="main-contacts">
+            <div class="main-contacts__wrapper">
+              <a href="tel:+78127775588" class="main-contacts__phone">+7 812 777-55-88</a>
+              <address class="main-contacts__address main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+            </div>
+              <a href="form.html" id="booking-form" class="main-contacts__btn btn btn--bg-orange btn--icon-calendar"><span></span>Забронировать</a>
+          </div>
+
+      </div>
+      <div class="outliner"></div>
+
+  </header>
+
+  <section class="form">
+
+      <h1 class="form__title  main-title  main-title--maxi">Бронирование</h1>
+      <p class="form__text  main-text  main-text--orange">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78127775588">+7 812 777-55-88</a></p>
+
+
+      <form action="" class="booking-form">
+
+          <!-- Шаг 1 выбор даты -->
+
+          <div id="restPeriod" class="form-item  form-item--bg-gray">
+            <div class="form-item__inner">
+              <p class="step-number">Шаг 1</p>
+              <h2 class="main-title main-title--mini">Дата отдыха</h2>
+              <div class="rest-period">
+
+                <div class="rest-period__item">
+                    <p class="main-text main-text--form">Дата въезда</p>
+                      <div class="rest-period__input-wrapper">
+                          <input type="text" class="rest-period__hidden-input" id="start" value="">
+                          <span class="rest-period__input  main-text main-text--form-blue" id="startD">
+                            <span class="rest-period__input-placeholer  main-text main-text--light">ДД</span>
+                          </span>
+                          <span class="rest-period__input  main-text main-text--form-blue" id="startM">
+                            <span class="rest-period__input-placeholer  main-text main-text--light">ММ</span>
+                          </span>
+                          <span class="rest-period__input  main-text main-text--form-blue" id="startY">
+                            <span class="rest-period__input-placeholer  main-text main-text--light">ГГГГ</span>
+                          </span>
+                      </div>
+                </div>
+
+                <div class="rest-period__item">
+                      <p class="main-text main-text--form">Дата выезда</p>
+                      <div class="rest-period__input-wrapper">
+                        <input type="text" class="rest-period__hidden-input" id="end" value="">
+                        <span class="rest-period__input  main-text main-text--form-blue" id="endD">
+                          <span class="rest-period__input-placeholer  main-text main-text--light">ДД</span>
+                        </span>
+                        <span class="rest-period__input  main-text main-text--form-blue" id="endM">
+                          <span class="rest-period__input-placeholer  main-text main-text--light">ММ</span>
+                        </span>
+                        <span class="rest-period__input  main-text main-text--form-blue" id="endY">
+                          <span class="rest-period__input-placeholer  main-text main-text--light">ГГГГ</span>
+                        </span>
+                      </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 2 выбор места  -->
+
+          <div class="form-item">
+            <div class="form-item__inner">
+              <p class="step-number">Шаг 2</p>
+              <h2 class="main-title main-title--mini">Место проживания</h2>
+              <div class="placement-type">
+
+                <div class="placement-type__item">
+                  <label for="placement-hotel" class="placement-type__label placement-type__label--hotel  placement-type__label--active">
+                    <span class="placement-type__text main-text  main-text--form">Отель</span>
+                    <input type="radio" name="Отель" class="placement-type__input">
+                  </label>
+                </div>
+
+                <div class="placement-type__item">
+                  <label for="placement-cottage" class="placement-type__label placement-type__label--cottage">
+                    <span class="placement-type__text main-text  main-text--form">Коттедж</span>
+                    <input type="radio" name="Коттедж" class="placement-type__input">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 3 выбор типа коттеджа  -->
+
+          <div class="form-item  form-item--bg-gray">
+            <div class="form-item__inner">
+              <p class="step-number">Шаг 3</p>
+              <h2 class="cottage-type__title  cottage-type__title--active  main-title main-title--mini">Тип отеля</h2>
+              <h2 class="cottage-type__title  main-title main-title--mini">Тип коттеджа</h2>
+              <div class="cottage-type">
+
+                <!-- Список номеров -->
+
+                <div  class="cottage-type__list  cottage-type__list--active">
+                    <a href="#hotelAdv1" class="cottage-type__item">
+                      <span class="cottage-type__text  cottage-type__text--active  main-text  main-text--form-light">Эконом</span>
+                      <input type="radio" name="Эконом" value="4000">
+                    </a>
+
+                    <a href="#hotelAdv2" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Стандарт</span>
+                      <input type="radio" name="Стандарт" value="5000">
+                    </a>
+
+                    <a href="#hotelAdv3" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Стандарт +</span>
+                      <input type="radio" name="Стандарт +" value="6000">
+                    </a>
+
+                    <a href="#hotelAdv4" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Люкс</span>
+                      <input type="radio" name="Люкс" value="7500">
+                    </a>
+
+                </div>
+
+                <!-- Список коттеджей -->
+
+                <div  class="cottage-type__list">
+                    <a href="#cotAdv1" class="cottage-type__item">
+                      <span class="cottage-type__text  cottage-type__text--active  main-text  main-text--form-light">Флагман</span>
+                      <input type="radio" name="Флагман" value="5000">
+                    </a>
+
+                    <a href="#cotAdv2" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Озерный</span>
+                      <input type="radio" name="Озерный" value="6500">
+                    </a>
+
+                    <a href="#cotAdv3" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Портовый</span>
+                      <input type="radio" name="Портовый" value="7500">
+                    </a>
+
+                    <a href="#cotAdv4" class="cottage-type__item">
+                      <span class="cottage-type__text  main-text  main-text--form-light">Ольховка</span>
+                      <input type="radio" name="Ольховка" value="10000">
+                    </a>
+
+                </div>
+
+                <!-- Преимущества отеля -->
+
+                <div class="cottage-advantages  cottage-advantages--active">
+
+                  <div id="hotelAdv1" class="cottage-advantages__item  cottage-advantages__item--active">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 30 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">1 комната</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">2 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="hotelAdv2" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 50 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">1 комната</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">2 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="hotelAdv3" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 60 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">2 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">5 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="hotelAdv4" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 100 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">3 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">8 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                </div>
+
+                <!-- Преимущество коттеджей -->
+
+                <div class="cottage-advantages">
+
+                  <div id="cotAdv1" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 100 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">3 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">5 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="cotAdv2" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="cotAdv3" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div id="cotAdv4" class="cottage-advantages__item">
+                      <ul class="cottage-advantages__list">
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--square">Площадь 220 м2</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--rooms">6 комнаты</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--beds">7 спальных мест</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--bath">Раздельный санузел</span>
+                          </li>
+                          <li class="cottage-advantages__list-item  main-text  main-text--bold">
+                            <span class="cottage-advantages__text  cottage-advantages__text--wifi">Wi-Fi</span>
+                          </li>
+                      </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 4 Персональная информация -->
+
+          <div class="form-item">
+            <div class="form-item__inner">
+              <p class="step-number">Шаг 4</p>
+              <h2 class="main-title main-title--mini">Персональная информация</h2>
+              <div class="personal-info" id="personalInfo">
+                  <input type="text" name="first-name" id="firstName" value="" class="personal-info__item  main-text  main-text--form  main-text  main-text--form" placeholder="ИМЯ">
+                  <input type="text" name="surname" id="surName" value="" class="personal-info__item  main-text  main-text--form" placeholder="ФАМИЛИЯ">
+                  <input type="text" name="phone" id="phone" value="" class="personal-info__item  main-text  main-text--form" placeholder="НОМЕР ТЕЛЕФОНА">
+                  <input type="text" name="e-mail" id="eMail" value="" class="personal-info__item  main-text  main-text--form" placeholder="E-MAIL">
+                  <p class="personal-info__text  main-text  main-text--low">Мы свяжемся с Вами в случае необходимости</p>
+                  <p class="personal-info__text  main-text  main-text--low">На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 5 выбор способа оплаты -->
+
+          <div class="form-item  form-item--bg-gray">
+            <div class="form-item__inner">
+              <p class="step-number">Шаг 5</p>
+              <h2 class="main-title main-title--mini">Способ оплаты</h2>
+              <div class="payment-type">
+
+                <div class="total-price">
+                    <p class="main-text  main-text--form">К оплате</p>
+                    <span class="total-price__cost  main-text  main-text--form" id="totalCost"></span>
+                    <p class="total-price__text  main-text  main-text--low"><span class="total-price__warn"></span>Пожалуйста, <a href="#" id="errorCause"></a>, чтобы увидеть сумму к оплате</p>
+                </div>
+
+                <div class="payment-type__switcher">
+                    <label for="on-arrival" class="payment-type__on-arrival">
+                      <input type="radio" name="payment-type">
+                      <p class="payment-type__subtitle  main-text  main-text--form" id="onArrival">По приезду</p>
+                      <p class="payment-type__text  main-text  main-text--low">Вы можете произвести оплату по факту заселения.</p>
+                    </label>
+
+                    <div class="payment-type__bank-card">
+
+                        <p class="payment-type__subtitle  payment-type__subtitle--active  main-text  main-text--form" id="bankCard">Сейчас</p>
+
+                        <p class="payment-type__text  main-text  main-text--low">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+
+
+                        <ul class="pay-now">
+                          <li class="pay-now__item">
+
+                            <label for="card-number" class="pay-now__subtitle  main-text  main-text--form">Номер карты</label>
+                            <input type="text" placeholder="0000-0000-0000-0000" class="pay-now__input  main-text  main-text--form" id="cardNumber">
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-owner-name" class="pay-now__subtitle  main-text  main-text--form">Фамилия владельца карты</label>
+                            <input type="text" placeholder="sergey sidorov" class="pay-now__input  main-text  main-text--form" id="cardOwner">
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-CVV" class="pay-now__subtitle  pay-now__subtitle--question  main-text  main-text--form">Код CVV</label>
+                            <span class="pay-now__cvv-question"></span>
+                            <input type="text" placeholder="123" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="cardCVV">
+
+                            <span class="pay-now__cvv-info  main-text  main-text--low">Код CVV2 можно найти на обратной стороне карты, это последние 3 цифры из семизначного числа рядом с подписью держателя карты.</span>
+
+                          </li>
+
+                          <li class="pay-now__item">
+
+                            <label for="card-valid-period" class="pay-now__subtitle  main-text  main-text--form">Действует до</label>
+                            <input type="text" placeholder="02/16" class="pay-now__input  pay-now__input--small  main-text  main-text--form" id="cardValidPeriod">
+
+                          </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+              </div>
+              <input type="submit" value="забронировать" class="btn btn--blue" id="booking">
+            </div>
+          </div>
+      </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <address class="page-footer__contact-text main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+
+      <div class="page-footer__logo-wrap">
+
+          <a href="index.html" class="main-logo">
+            <img src="./img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <div class="social">
+            <a href="#" class="link-social link-social--vk-green"></a>
+            <a href="#" class="link-social link-social--insta-green"></a>
+            <a href="#" class="link-social link-social--fb-green"></a>
+          </div>
+
+      </div>
+
+      <div class="page-footer__contact-wrap">
+
+          <a href="tel:+78120000000" class="page-footer__contact-text main-text main-text--address">+78120000000</a>
+          <a href="mailto:info@greenvalue.ru" class="page-footer__contact-text main-text main-text--address">info@greenvalue.ru</a>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+
+  </body>
+
+  </html>

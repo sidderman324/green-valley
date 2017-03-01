@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список комнат</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+      <div class="page-header__inner">
+
+          <a href="index.html" class="main-logo main-logo__header">
+            <img src="img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <a class="toggler-nav" id="toggler"><span></span></a>
+
+          <div class="main-nav  main-nav--hidden" id="nav">
+              <nav class="main-nav__nav">
+                  <ul class="main-nav__list">
+                      <li class="main-nav__item">
+                          <a class="main-nav__link  main-nav__link--active" href="./rooms-list.html">Номера</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="./single-room.html">Коттедж</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Ресторан</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Отдых</a>
+                      </li>
+                      <li class="main-nav__item">
+                          <a class="main-nav__link" href="#">Контакты</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+
+          <div class="main-contacts">
+            <div class="main-contacts__wrapper">
+              <a href="tel:+78127775588" class="main-contacts__phone">+7 812 777-55-88</a>
+              <address class="main-contacts__address main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+            </div>
+              <a href="form.html" id="booking-form" class="main-contacts__btn btn btn--bg-orange btn--icon-calendar"><span></span>Забронировать</a>
+          </div>
+
+      </div>
+      <div class="outliner"></div>
+
+  </header>
+
+
+  <section class="room-type">
+    <div class="room-type__inner">
+      <div class="room-type__promo">
+        <h1 class="room-type__promo-title main-title main-title--maxi main-title--white">Номера в отеле Green Valley</h1>
+        <p class="room-type__promo-text main-text main-text--maxi">Комфорт и живописный вид на Финский залив и сосновый парк. 4 этажа | 70 номеров</p>
+      </div>
+
+      <h1 class="room-type__title main-title">Категории</h1>
+
+      <div class="room-card">
+        <h2 class="room-card__title main-title main-title--mini">Эконом</h2>
+          <p class="room-card__price price price--orange">от <span>3400</span> руб./сутки</p>
+          <div class="room-card__photo">
+            <img src="./img/econom.png" alt="Номер эконом">
+          </div>
+          <p class="room-card__text main-text">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив. </p>
+        <div class="room-card__btn">
+          <a href="form.html" class="btn btn--bg-orange">Забронировать</a>
+          <a href="./single-room.html" class="btn btn--detail">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <h2 class="room-card__title main-title main-title--mini">Стандарт</h2>
+          <p class="room-card__price price price--orange">от <span>4000</span> руб./сутки</p>
+          <div class="room-card__photo">
+            <img src="./img/stand.png" alt="Номер стандарт">
+          </div>
+          <p class="room-card__text main-text">В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м., состоит из гостевой и спальной зоны.</p>
+        <div class="room-card__btn">
+          <a href="form.html" class="btn btn--bg-orange">Забронировать</a>
+          <a href="./single-room.html" class="btn btn--detail">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <h2 class="room-card__title main-title main-title--mini">Стандарт +</h2>
+          <p class="room-card__price price price--orange">от <span>4500</span> руб./сутки</p>
+          <div class="room-card__photo">
+            <img src="./img/stand+.png" alt="Номер стандарт улучшенный">
+          </div>
+          <p class="room-card__text main-text">В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек. Площадь номера от 35 кв.м.</p>
+        <div class="room-card__btn">
+          <a href="form.html" class="btn btn--bg-orange">Забронировать</a>
+          <a href="./single-room.html" class="btn btn--detail">Подробнее</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <h2 class="room-card__title main-title main-title--mini">Люкс</h2>
+          <p class="room-card__price price price--orange">от <span>5700</span> руб./сутки</p>
+          <div class="room-card__photo">
+            <img src="./img/lux.png" alt="Номер люкс">
+          </div>
+          <p class="room-card__text main-text">В отеле 5 таких номера. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнен в оригинальном cтиле.</p>
+          <div class="room-card__btn">
+            <a href="form.html" class="btn btn--bg-orange">Забронировать</a>
+            <a href="./single-room.html" class="btn btn--detail">Подробнее</a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <address class="page-footer__contact-text main-text main-text--address">г. Санкт-Петербург, Приморское шоссе, 600</address>
+
+      <div class="page-footer__logo-wrap">
+
+          <a href="index.html" class="main-logo">
+            <img src="./img/logo.png" alt="GREEN VALLEY" class="main-logo__img">
+          </a>
+
+          <div class="social">
+            <a href="#" class="link-social link-social--vk-green"></a>
+            <a href="#" class="link-social link-social--insta-green"></a>
+            <a href="#" class="link-social link-social--fb-green"></a>
+          </div>
+
+      </div>
+
+      <div class="page-footer__contact-wrap">
+
+          <a href="tel:+78120000000" class="page-footer__contact-text main-text main-text--address">+78120000000</a>
+          <a href="mailto:info@greenvalue.ru" class="page-footer__contact-text main-text main-text--address">info@greenvalue.ru</a>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
