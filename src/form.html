@@ -120,14 +120,14 @@
                 <div class="placement-type__item">
                   <label for="placement-hotel" class="placement-type__label placement-type__label--hotel  placement-type__label--active">
                     <span class="placement-type__text main-text  main-text--form">Отель</span>
-                    <input type="radio" name="placement-type" class="placement-type__input">
+                    <input type="radio" name="Отель" class="placement-type__input">
                   </label>
                 </div>
 
                 <div class="placement-type__item">
                   <label for="placement-cottage" class="placement-type__label placement-type__label--cottage">
                     <span class="placement-type__text main-text  main-text--form">Коттедж</span>
-                    <input type="radio" name="placement-type" class="placement-type__input">
+                    <input type="radio" name="Коттедж" class="placement-type__input">
                   </label>
                 </div>
               </div>
@@ -148,22 +148,22 @@
                 <div  class="cottage-type__list  cottage-type__list--active">
                     <a href="#hotelAdv1" class="cottage-type__item">
                       <span class="cottage-type__text  cottage-type__text--active  main-text  main-text--form-light">Эконом</span>
-                      <input type="radio" name="cottage-type__input" value="4000">
+                      <input type="radio" name="Эконом" value="4000">
                     </a>
 
                     <a href="#hotelAdv2" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Стандарт</span>
-                      <input type="radio" name="cottage-type__input" value="5000">
+                      <input type="radio" name="Стандарт" value="5000">
                     </a>
 
                     <a href="#hotelAdv3" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Стандарт +</span>
-                      <input type="radio" name="cottage-type__input" value="6000">
+                      <input type="radio" name="Стандарт +" value="6000">
                     </a>
 
                     <a href="#hotelAdv4" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Люкс</span>
-                      <input type="radio" name="cottage-type__input" value="7500">
+                      <input type="radio" name="Люкс" value="7500">
                     </a>
 
                 </div>
@@ -173,22 +173,22 @@
                 <div  class="cottage-type__list">
                     <a href="#cotAdv1" class="cottage-type__item">
                       <span class="cottage-type__text  cottage-type__text--active  main-text  main-text--form-light">Флагман</span>
-                      <input type="radio" name="cottage-type__input" value="5000">
+                      <input type="radio" name="Флагман" value="5000">
                     </a>
 
                     <a href="#cotAdv2" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Озерный</span>
-                      <input type="radio" name="cottage-type__input" value="6500">
+                      <input type="radio" name="Озерный" value="6500">
                     </a>
 
                     <a href="#cotAdv3" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Портовый</span>
-                      <input type="radio" name="cottage-type__input" value="7500">
+                      <input type="radio" name="Портовый" value="7500">
                     </a>
 
                     <a href="#cotAdv4" class="cottage-type__item">
                       <span class="cottage-type__text  main-text  main-text--form-light">Ольховка</span>
-                      <input type="radio" name="cottage-type__input" value="10000">
+                      <input type="radio" name="Ольховка" value="10000">
                     </a>
 
                 </div>
@@ -376,10 +376,10 @@
               <p class="step-number">Шаг 4</p>
               <h2 class="main-title main-title--mini">Персональная информация</h2>
               <div class="personal-info" id="personalInfo">
-                  <input type="text" name="first-name" id="firstName" class="personal-info__item  main-text  main-text--form  main-text  main-text--form" placeholder="ИМЯ">
-                  <input type="text" name="surname" id="surName" class="personal-info__item  main-text  main-text--form" placeholder="ФАМИЛИЯ">
-                  <input type="text" name="phone" id="phone" class="personal-info__item  main-text  main-text--form" placeholder="НОМЕР ТЕЛЕФОНА">
-                  <input type="text" name="e-mail" id="eMail" class="personal-info__item  main-text  main-text--form" placeholder="E-MAIL">
+                  <input type="text" name="first-name" id="firstName" value="" class="personal-info__item  main-text  main-text--form  main-text  main-text--form" placeholder="ИМЯ">
+                  <input type="text" name="surname" id="surName" value="" class="personal-info__item  main-text  main-text--form" placeholder="ФАМИЛИЯ">
+                  <input type="text" name="phone" id="phone" value="" class="personal-info__item  main-text  main-text--form" placeholder="НОМЕР ТЕЛЕФОНА">
+                  <input type="text" name="e-mail" id="eMail" value="" class="personal-info__item  main-text  main-text--form" placeholder="E-MAIL">
                   <p class="personal-info__text  main-text  main-text--low">Мы свяжемся с Вами в случае необходимости</p>
                   <p class="personal-info__text  main-text  main-text--low">На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
               </div>
@@ -403,13 +403,13 @@
                 <div class="payment-type__switcher">
                     <label for="on-arrival" class="payment-type__on-arrival">
                       <input type="radio" name="payment-type">
-                      <p class="payment-type__subtitle  main-text  main-text--form">По приезду</p>
+                      <p class="payment-type__subtitle  main-text  main-text--form" id="onArrival">По приезду</p>
                       <p class="payment-type__text  main-text  main-text--low">Вы можете произвести оплату по факту заселения.</p>
                     </label>
 
                     <div class="payment-type__bank-card">
 
-                        <p class="payment-type__subtitle  payment-type__subtitle--active  main-text  main-text--form">Сейчас</p>
+                        <p class="payment-type__subtitle  payment-type__subtitle--active  main-text  main-text--form" id="bankCard">Сейчас</p>
 
                         <p class="payment-type__text  main-text  main-text--low">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
 
@@ -451,7 +451,7 @@
                 </div>
 
               </div>
-              <input type="submit" value="забронировать" class="btn btn--blue">
+              <input type="submit" value="забронировать" class="btn btn--blue" id="booking">
             </div>
           </div>
       </form>

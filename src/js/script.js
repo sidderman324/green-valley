@@ -393,7 +393,7 @@ $(document).ready(function() {
       $('.pay-now__cvv-info').removeClass('pay-now__cvv-info--active');
   });
 
-
+  var dateValid;
 
   $(function() {
       var pickerStart = new Pikaday({
@@ -401,11 +401,14 @@ $(document).ready(function() {
       onSelect: function() {
         var startDate = pickerStart.getDate();
         var calcStart = moment(startDate).toDate();
+        var startFormat = moment(calcStart).format("dddd, MMMM D YYYY");
         var startMS = moment(calcStart).valueOf();
         $('#startD').text( calcStart.getDate() );
         $('#startM').text( calcStart.getMonth() + 1 );
         $('#startY').text( calcStart.getFullYear() );
         $('#start').attr('value', startMS);
+        $('#start').attr('name', startFormat);
+        dateCheck();
         }
       });
       var pickerEnd = new Pikaday({
@@ -413,52 +416,64 @@ $(document).ready(function() {
       onSelect: function() {
         var endDate = pickerEnd.getDate();
         var calcEnd = moment(endDate).toDate();
+        var endFormat = moment(calcEnd).format("dddd, MMMM D YYYY");
         var endMS = moment(calcEnd).valueOf();
         $('#endD').text( calcEnd.getDate() );
         $('#endM').text( calcEnd.getMonth() + 1 );
         $('#endY').text( calcEnd.getFullYear() );
         $('#end').attr('value', endMS);
+        $('#end').attr('name', endFormat);
+        dateCheck();
         }
       });
   });
+
+
+  function dateCheck() {
+    $('.total-price__text').fadeIn(400);
+    var start = $('#start').attr('value');
+    var end = $('#end').attr('value');
+    var endCalc = end / (1000 * 60 * 60 * 24);
+    var days = (end - start) / (1000 * 60 * 60 * 24);
+    dateValid = 0;
+    if (days > 0) {
+      dateValid = 3;
+    } else {
+      dateValid = 0
+    }
+    if (dateValid == 3) {
+      $('.total-price__text').fadeOut(400);
+    } else {
+      $('#errorCause').text( 'выберите корректную дату' );
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').attr('href', '#restPeriod');
+    }
+    totalCost();
+  }
+
 
   function totalCost() {
     var placePrice = $('.cottage-type__list--active .cottage-type__text--active').next().attr("value");
     var start = $('#start').attr('value');
     var end = $('#end').attr('value');
-    var today = new Date().getTime();
     var days = (end - start) / (1000 * 60 * 60 * 24);
-    if (start < today) {
-      $('#errorCause').text( 'выберите корректную дату' );
-      $('.total-price__text').fadeIn(400);
-      $('#errorCause').attr('href', '#restPeriod');
-    }
-    if (end < today) {
-      $('#errorCause').text( 'выберите корректную дату' );
-      $('.total-price__text').fadeIn(400);
-      $('#errorCause').attr('href', '#restPeriod');
-    }
-    if (days < 1) {
-      $('#errorCause').text( 'выберите корректную дату' );
-      $('.total-price__text').fadeIn(400);
-      $('#errorCause').attr('href', '#restPeriod');
-    }
-    if ( $('.personal-info__item').hasClass('input-validate__error') ) {
-      $('#errorCause').text( 'введите корректные данные' );
-      $('#errorCause').attr('href', '#personalInfo');
-    }
-    if ( $('.personal-info__item').val()!='' ) {
-      $('#errorCause').text( 'введите корректные данные' );
-      $('#errorCause').attr('href', '#personalInfo');
-    }
-    if ( $('.personal-info__item').hasClass('input-validate__success') ) {
-      $('.total-price__text').fadeOut(400);
-    }
+    var today = new Date().getTime();
     var totalCost = days * placePrice;
     if (totalCost < 1) {
       $('#totalCost').text ( '-' );
     } else {
       $('#totalCost').text ( totalCost + ' руб' );
+    }
+    if ( $('.personal-info__item').hasClass('input-validate__error') ) {
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').text( 'выберите корректные данные' );
+      $('#errorCause').attr('href', '#personalInfo');
+    } else if ( $('.personal-info__item').hasClass('input-validate__success') ) {
+      $('.total-price__text').fadeOut(400);
+    } else if (datevalid ==0 ) {
+      $('#errorCause').text( 'выберите корректную дату' );
+      $('.total-price__text').fadeIn(400);
+      $('#errorCause').attr('href', '#restPeriod');
     }
   }
 
@@ -474,5 +489,41 @@ $(document).ready(function() {
   $('.placement-type__item').click(totalCost);
   $('.cottage-type__list').click(totalCost);
   $('.rest-period__item').click(totalCost);
+
+
+
+  $('#booking').on('click', function(event){
+    event.preventDefault();
+    var start = $('#start').attr('name');
+    var end = $('#end').attr('name');
+    var placeType = $('.placement-type__label--active > input').attr('name');
+    var placeItem = $('.cottage-type__list--active .cottage-type__text--active').next().attr("name");
+    var firstName = $('#firstName:text').val();
+    var surName = $('#surName:text').val();
+    var phone = $('#phone:text').val();
+    var eMail = $('#eMail:text').val();
+
+    console.log(start);
+    console.log(end);
+    console.log(placeType);
+    console.log(placeItem);
+    console.log(firstName);
+    console.log(surName);
+    console.log(phone);
+    console.log(eMail);
+    if ( $('#onArrival').hasClass('payment-type__subtitle--active')) {
+      console.log('Оплата по приезду')
+    } else if ( $('#bankCard').hasClass('payment-type__subtitle--active')) {
+      var cardNumber = $('#cardNumber:text').val();
+      var cardOwner = $('#cardOwner:text').val();
+      var cardCVV = $('#cardCVV:text').val();
+      var cardValidPeriod = $('#cardValidPeriod:text').val();
+      console.log(cardNumber);
+      console.log(cardOwner);
+      console.log(cardCVV);
+      console.log(cardValidPeriod);
+    }
+  });
+
 
 });

@@ -200,13 +200,13 @@
         setDefaultDate: false,
 
         // first day of week (0: Sunday, 1: Monday etc)
-        firstDay: 0,
+        firstDay: 1,
 
         // the default flag for moment's strict date parsing
         formatStrict: false,
 
         // the minimum/earliest date that can be selected
-        minDate: null,
+        minDate: new Date(),
         // the maximum/latest date that can be selected
         maxDate: null,
 
@@ -251,8 +251,8 @@
 
         // internationalization
         i18n: {
-            previousMonth : 'Предыдущий',
-            nextMonth     : 'Следующий',
+            previousMonth : 'Следующий',
+            nextMonth     : 'Предыдущий',
             months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
             weekdays      : ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
             weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
