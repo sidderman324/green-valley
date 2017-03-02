@@ -10,24 +10,8 @@
 
   &__item {
     display: block;
-    width: auto;
     height: 100%;
     overflow: hidden;
-  }
-
-  &__main-wrapper {
-    display: none;
-    overflow: hidden;
-
-    @media (min-width: @screen-m) {
-      display: block;
-      height: 325px;
-    }
-
-    @media (min-width: @screen-l) {
-      display: block;
-      height: 490px;
-    }
   }
 
   &__thumbs-wrapper {
@@ -35,17 +19,12 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
   }
 
   &__photo-item {
     width: 100%;
     height: 100%;
-  }
-
-  .owl-stage {
-    display: flex;
-    flex-direction: row;
   }
 
   &__main-photo {
@@ -54,7 +33,7 @@
   }
 
   &__photo-thumbs {
-    width: 100%;
+    width: auto;
     height: 100%;
 
     @media (min-width: @screen-m) {
