@@ -50,19 +50,70 @@ $(document).ready(function() {
   });
 
 
-  $('#gallery-preview').owlCarousel({
-    loop: true,
-    center: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 6
-      }
-    }
-  });
+  // $('#gallery-preview').owlCarousel({
+  //   loop: true,
+  //   center: true,
+  //   dots: false,
+
+  // });
+
+  var $sync1 = $('#gallery-preview'),
+        $sync2 = $('#gallery-preview'),
+        flag = false,
+        duration = 300;
+
+    $sync1
+        .owlCarousel({
+        nav: true,
+        startPosition: '4',
+        dots: false,
+        center: true,
+        // loop: true,
+        navContainer: '#priceNav',
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 6
+          }
+        }
+        })
+        .on('changed.owl.carousel', function (e) {
+            if (!flag) {
+                flag = true;
+                $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                flag = false;
+            }
+        });
+
+
+    $sync2
+        .owlCarousel({
+        nav: false,
+        startPosition: '4',
+        touchDrag: false,
+        mouseDrag: false,
+        center: true,
+        dots: false,
+
+        })
+        .on('click', '.owl-item', function () {
+            $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+
+        })
+        .on('changed.owl.carousel', function (e) {
+            if (!flag) {
+                flag = true;
+                $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                flag = false;
+            }
+        });
+
+
+
+
+
 
   $('#gallery-preview img').on('click', function(event) {
     var imgSrc = $(this).attr('src');
@@ -503,14 +554,14 @@ $(document).ready(function() {
     var phone = $('#phone:text').val();
     var eMail = $('#eMail:text').val();
 
-    console.log(start);
-    console.log(end);
-    console.log(placeType);
-    console.log(placeItem);
-    console.log(firstName);
-    console.log(surName);
-    console.log(phone);
-    console.log(eMail);
+    console.log('Дата приезда: ' + start);
+    console.log('Дата отъезда: ' + end);
+    console.log('Тип размещения: ' + placeType);
+    console.log('Место размещения: ' + placeItem);
+    console.log('Имя: ' + firstName);
+    console.log('Фамилия: ' + surName);
+    console.log('Телефон: ' + phone);
+    console.log('e-mail: ' + eMail);
     if ( $('#onArrival').hasClass('payment-type__subtitle--active')) {
       console.log('Оплата по приезду')
     } else if ( $('#bankCard').hasClass('payment-type__subtitle--active')) {
@@ -518,10 +569,10 @@ $(document).ready(function() {
       var cardOwner = $('#cardOwner:text').val();
       var cardCVV = $('#cardCVV:text').val();
       var cardValidPeriod = $('#cardValidPeriod:text').val();
-      console.log(cardNumber);
-      console.log(cardOwner);
-      console.log(cardCVV);
-      console.log(cardValidPeriod);
+      console.log('Номер карты: ' + cardNumber);
+      console.log('Владелец карты: ' + cardOwner);
+      console.log('CVV: ' + cardCVV);
+      console.log('Срок действия карты: ' + cardValidPeriod);
     }
   });
 
