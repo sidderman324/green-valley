@@ -50,7 +50,6 @@ $(document).ready(function() {
   });
 
   galleryResize();
-  $(window).resize(galleryResize);
 
   function galleryResize() {
 	  if($(window).width() < 768) {
@@ -72,9 +71,14 @@ $(document).ready(function() {
 	  	heightSlider = widthSlider / 11.2;
 	  	$('#gallery-preview').css('height', heightSlider);
       $('#gallery-preview .gallery__item').css('height', heightSlider);
+      $('#gallery-preview .gallery__photo-thumbs').css('height', heightSlider);
+
 
 	  }
   };
+
+  $(window).resize(galleryResize);
+
 
   var $sync1 = $('#gallery-preview'),
         $sync2 = $('#gallery-preview'),
