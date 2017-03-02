@@ -72,12 +72,10 @@ $(document).ready(function() {
 	  	$('#gallery-preview').css('height', heightSlider);
       $('#gallery-preview .gallery__item').css('height', heightSlider);
       $('#gallery-preview .gallery__photo-thumbs').css('height', heightSlider);
-
-
 	  }
   };
 
-  $(window).ready(galleryResize);
+  $(document).ready(galleryResize);
   $(window).resize(galleryResize);
 
 
@@ -119,12 +117,11 @@ $(document).ready(function() {
           mouseDrag: false,
           center: true,
           dots: false,
-
-          })
+        }),
           .on('click', '.owl-item', function () {
               $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
 
-          })
+          }),
           .on('changed.owl.carousel', function (e) {
               if (!flag) {
                   flag = true;
@@ -138,38 +135,52 @@ $(document).ready(function() {
 
   $('#gallery-preview img').on('click', function(event) {
     var imgSrc = $(this).attr('src');
-    $(this).addClass('center');
     $('#gallery-main-img').attr('src', imgSrc);
   });
 
-  $('#gallery-main-img').on( 'click', function(event) {
-      $('#gallery-preview').trigger('to.owl.carousel', [2, 200]);
+  $('#reviewCard').owlCarousel({
+    loop: true,
+    responsive: {
+      0 : {
+        destroy.owl.carousel,
+      },
+      1199 : {
+        items: 2,
+      }
+    }
   });
 
 
 
-  function reviewGallery() {
-
-    var windowWidth = $(window).width();
-    if (windowWidth < 1199) {
-      $('.review-card:nth-child(3)').addClass('review-card--hidden');
-      $('.review-card:nth-child(4)').addClass('review-card--hidden');
-      $('.review-card:nth-child(5)').addClass('review-card--hidden');
-      $('.review-card:nth-child(6)').addClass('review-card--hidden');
-      $('#reviewCard').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
-      $('#reviewCard').find('.owl-stage-outer').children().unwrap();
-    } else {
-      $('#reviewCard').owlCarousel({
-        items: 2,
-        loop: true,
-      });
-      $('.review-card').removeClass('review-card--hidden');
-    }
-    console.log(windowWidth);
-  }
-
-  $(document).ready(reviewGallery);
-  $('#reviewCard').resize(reviewGallery);
+  // function reviewGallery() {
+  //
+  //   var windowWidth = $(window).width();
+  //   if (windowWidth < 1199) {
+  //     // $('.review-card:nth-child(3)').addClass('review-card--hidden');
+  //     // $('.review-card:nth-child(4)').addClass('review-card--hidden');
+  //     // $('.review-card:nth-child(5)').addClass('review-card--hidden');
+  //     // $('.review-card:nth-child(6)').addClass('review-card--hidden');
+  //     // $('#reviewCard').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+  //     // $('#reviewCard').find('.owl-stage-outer').children().unwrap();
+  // //   } else {
+  // //  $('#reviewCard').owlCarousel({
+  //     loop: true,
+  //     responsive: {
+  //       0 : {
+  //         destroy.owl.carousel,
+  //       }
+  //       1199 : {
+  //         items: 2,
+  //       }
+  //     }
+  //   });
+  //     $('.review-card').removeClass('review-card--hidden');
+  //   }
+  //   console.log(windowWidth);
+  // }
+  //
+  // $(document).ready(reviewGallery);
+  // $(window).resize(reviewGallery);
 
 
   $('#reviewAll').on('click', function(event) {
