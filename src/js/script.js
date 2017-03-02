@@ -54,8 +54,8 @@ $(document).ready(function() {
   function galleryResize() {
 	  if($(window).width() < 768) {
 	   	$('.gallery__main-wrapper').hide();
-      var widthMini = parseInt($('#gallery-preview').css('width')),
-      heightMini = widthMini / 1.56;
+      var widthSlider = parseInt($('#gallery-preview').css('width')),
+      heightMini = widthSlider / 1.56;
 	   	$('#gallery-preview').css('height', heightMini);
       $('#gallery-preview  .owl-stage-outer').css('height', heightMini);
       $('#gallery-preview  .gallery__photo-thumbs').css('height', heightMini);
@@ -77,62 +77,61 @@ $(document).ready(function() {
 	  }
   };
 
+  $(window).ready(galleryResize);
   $(window).resize(galleryResize);
 
 
-  var $sync1 = $('#gallery-preview'),
-        $sync2 = $('#gallery-preview'),
-        flag = false,
-        duration = 300;
+    var   $sync1 = $('#gallery-preview'),
+          $sync2 = $('#gallery-preview'),
+          flag = false,
+          duration = 300;
 
-    $sync1
-        .owlCarousel({
-        nav: true,
-        startPosition: '4',
-        dots: false,
-        center: true,
-        // loop: true,
-        navContainer: '#priceNav',
-        responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 6
+      $sync1
+          .owlCarousel({
+          nav: true,
+          startPosition: '4',
+          dots: false,
+          center: true,
+          // loop: true,
+          navContainer: '#priceNav',
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 6
+            }
           }
-        }
-        })
-        .on('changed.owl.carousel', function (e) {
-            if (!flag) {
-                flag = true;
-                $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                flag = false;
-            }
-        });
+          })
+          .on('changed.owl.carousel', function (e) {
+              if (!flag) {
+                  flag = true;
+                  $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                  flag = false;
+              }
+          });
 
-    $sync2
-        .owlCarousel({
-        nav: false,
-        startPosition: '3',
-        touchDrag: false,
-        mouseDrag: false,
-        center: true,
-        dots: false,
+      $sync2
+          .owlCarousel({
+          nav: false,
+          startPosition: '3',
+          touchDrag: false,
+          mouseDrag: false,
+          center: true,
+          dots: false,
 
-        })
-        .on('click', '.owl-item', function () {
-            $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+          })
+          .on('click', '.owl-item', function () {
+              $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
 
-        })
-        .on('changed.owl.carousel', function (e) {
-            if (!flag) {
-                flag = true;
-                $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                flag = false;
-            }
-        });
-
-
+          })
+          .on('changed.owl.carousel', function (e) {
+              if (!flag) {
+                  flag = true;
+                  $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                  flag = false;
+              }
+          });
 
 
 
@@ -170,7 +169,7 @@ $(document).ready(function() {
   }
 
   $(document).ready(reviewGallery);
-  $(window).resize(reviewGallery);
+  $('#reviewCard').resize(reviewGallery);
 
 
   $('#reviewAll').on('click', function(event) {
