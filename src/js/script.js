@@ -81,6 +81,7 @@ $(document).ready(function() {
 
   $('#gallery-preview').owlCarousel({
     center: true,
+    startPosition: 4,
     // loop: true,
     responsive : {
       0 : {
@@ -93,9 +94,14 @@ $(document).ready(function() {
   });
 
   $('#gallery-preview').on('click', '.owl-item', function (event) {
+    // var countClon = $('#gallery-preview  .cloned').length;
     var indexItem = $(this).index();
+    // console.log(countClon);
+    // console.log(indexItem);
     $('#gallery-preview').trigger('to.owl.carousel', indexItem);
   });
+
+
 
   $('#gallery-preview img').on('click', function(event) {
     var imgSrc = $(this).attr('src');
