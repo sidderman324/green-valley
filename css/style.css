@@ -610,7 +610,7 @@ a {
       -ms-grid-row-align: center;
       align-self: center;
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -49px -143px;
   width: 15px;
   height: 16px;
@@ -638,31 +638,31 @@ a {
   display: inline-block;
 }
 .link-social--vk {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -111px -115px;
   width: 22px;
   height: 13px;
 }
 .link-social--fb {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -201px -51px;
   width: 17px;
   height: 17px;
 }
 .link-social--fb-green {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -196px -128px;
   width: 22px;
   height: 20px;
 }
 .link-social--insta-green {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -170px -128px;
   width: 22px;
   height: 20px;
 }
 .link-social--vk-green {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -170px -78px;
   width: 27px;
   height: 20px;
@@ -1274,7 +1274,7 @@ footer .main-logo {
 .transport-type__title--bus:before {
   content: '';
   display: block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -170px 0px;
   width: 50px;
   height: 27px;
@@ -1284,7 +1284,7 @@ footer .main-logo {
 .transport-type__title--train:before {
   content: '';
   display: block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -49px -115px;
   width: 58px;
   height: 24px;
@@ -1720,7 +1720,7 @@ footer .main-logo {
 .placement-type__label--active:after {
   content: '';
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -137px -115px;
   width: 16px;
   height: 12px;
@@ -1737,13 +1737,13 @@ footer .main-logo {
   opacity: 0.5;
 }
 .placement-type__label--hotel:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: 0px 0px;
   width: 82px;
   height: 64px;
 }
 .placement-type__label--cottage:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -86px 0px;
   width: 80px;
   height: 62px;
@@ -1811,7 +1811,7 @@ footer .main-logo {
 .cottage-type__text--active:before {
   content: '';
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -137px -115px;
   width: 16px;
   height: 12px;
@@ -1822,7 +1822,7 @@ footer .main-logo {
 .cottage-type__text--active:after {
   content: '';
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -201px -31px;
   width: 19px;
   height: 16px;
@@ -1883,35 +1883,35 @@ footer .main-logo {
   bottom: 48px;
 }
 .cottage-advantages__text--square:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: 0px -115px;
   width: 45px;
   height: 45px;
   left: 16px;
 }
 .cottage-advantages__text--rooms:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -170px -31px;
   width: 27px;
   height: 43px;
   left: 27px;
 }
 .cottage-advantages__text--beds:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: 0px -68px;
   width: 55px;
   height: 43px;
   left: 15px;
 }
 .cottage-advantages__text--bath:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -113px -68px;
   width: 52px;
   height: 28px;
   left: 15px;
 }
 .cottage-advantages__text--wifi:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -59px -68px;
   width: 50px;
   height: 42px;
@@ -1984,7 +1984,7 @@ footer .main-logo {
 }
 .total-price__warn {
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -88px -143px;
   width: 13px;
   height: 12px;
@@ -2085,7 +2085,7 @@ footer .main-logo {
 .payment-type__subtitle:before {
   content: '';
   display: inline-block;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -68px -143px;
   width: 16px;
   height: 12px;
@@ -2094,7 +2094,7 @@ footer .main-logo {
   left: 40px;
 }
 .payment-type__subtitle--active:before {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -137px -115px;
   width: 16px;
   height: 12px;
@@ -2177,7 +2177,7 @@ footer .main-logo {
 .pay-now__cvv-question {
   display: none;
   cursor: pointer;
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -201px -78px;
   width: 16px;
   height: 17px;
@@ -2241,7 +2241,7 @@ footer .main-logo {
   width: auto;
 }
 .modal__loupe-close {
-  background-image: url(../img/sprite-040661320240873544.png);
+  background-image: url(../img/sprite-09227590480959202.png);
   background-position: -196px -102px;
   width: 22px;
   height: 22px;
@@ -2435,7 +2435,7 @@ footer .main-logo {
   }
   .room-description__loupe{
     display: inline-block;
-    background-image: url(../img/sprite-040661320240873544.png);
+    background-image: url(../img/sprite-09227590480959202.png);
     background-position: -170px -102px;
     width: 22px;
     height: 22px;
