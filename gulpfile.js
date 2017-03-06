@@ -169,7 +169,7 @@ gulp.task('js', function () {
       dirs.source + '/js/script.js',
     ])
     .pipe(plumber({ errorHandler: onError }))
-    // .pipe(concat('script.min.js'))
+    .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dirs.build + '/js'));
 });
